@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Am I exam-ready? – A1 German readiness check</title>
+  <meta name="description" content="A 10-minute check that tells you whether you are ready for the Goethe or ÖSD A1 German exam – by skill – and what to practise before you book." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%231f4fd1%27/%3E%3Ctext x=%2716%27 y=%2721%27 font-size=%2713%27 font-family=%27Arial%27 font-weight=%27700%27 fill=%27white%27 text-anchor=%27middle%27%3EA1%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  <style>
+:root {
+  --ink: #0f172a;
+  --ink-2: #475569;
+  --ink-3: #94a3b8;
+  --line: #e2e8f0;
+  --line-2: #cbd5e1;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --brand: #2546d8;
+  --brand-2: #1d3bb8;
+  --brand-soft: #eef2ff;
+  --ready: #047857;   --ready-soft: #ecfdf5;  --ready-line: #a7f3d0;
+  --almost: #b45309;  --almost-soft: #fffbeb; --almost-line: #fde68a;
+  --notyet: #b91c1c;  --notyet-soft: #fef2f2; --notyet-line: #fecaca;
+  --radius: 16px;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, .05);
+  --shadow: 0 1px 3px rgba(15, 23, 42, .06), 0 8px 24px -12px rgba(15, 23, 42, .12);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "cv11", "ss01";
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1; width: 100%; max-width: 620px; margin: 0 auto; padding: 28px 20px 48px; }
+h1 { font-size: 1.85rem; line-height: 1.18; margin: 10px 0 10px; letter-spacing: -.025em; font-weight: 750; }
+h2 { font-size: 1.05rem; margin: 36px 0 12px; letter-spacing: -.01em; font-weight: 700; }
+h3 { font-size: 1rem; margin: 0 0 4px; letter-spacing: -.005em; }
+p { line-height: 1.6; margin: .4rem 0; }
+.lead { font-size: 1.05rem; color: var(--ink-2); }
+.muted { color: var(--ink-2); }
+.small { font-size: .875rem; }
+.opt { font-size: .78rem; font-weight: 500; color: var(--ink-3); margin-left: 4px; }
+a { color: var(--brand); }
+code { font-size: .85em; background: var(--brand-soft); padding: 1px 5px; border-radius: 5px; }
+
+/* Header & footer */
+.topbar { background: rgba(255,255,255,.85); backdrop-filter: saturate(180%) blur(8px); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
+.brand { display: flex; align-items: center; gap: 10px; max-width: 620px; margin: 0 auto; padding: 12px 20px; font-weight: 700; color: var(--ink); text-decoration: none; letter-spacing: -.01em; }
+.brand-mark { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 9px; background: linear-gradient(135deg, var(--brand), #4f6ef7); color: #fff; font-size: .78rem; font-weight: 800; }
+.foot { max-width: 620px; margin: 0 auto; padding: 20px; display: flex; gap: 12px; justify-content: space-between; flex-wrap: wrap; color: var(--ink-3); font-size: .78rem; border-top: 1px solid var(--line); width: 100%; }
+.foot a { color: var(--ink-2); text-decoration: none; }
+.foot a:hover { color: var(--brand); }
+
+/* Building blocks */
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow-sm); }
+.stack > * + * { margin-top: 10px; }
+.eyebrow { display: inline-block; font-size: .75rem; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; color: var(--brand); background: var(--brand-soft); padding: 5px 10px; border-radius: 99px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 12px; padding: 12px 20px; font: inherit; font-weight: 650; font-size: .95rem; cursor: pointer; background: var(--brand); color: #fff; min-height: 48px; transition: background .15s, transform .05s; text-decoration: none; }
+.btn:hover { background: var(--brand-2); }
+.btn:active { transform: translateY(1px); }
+.btn[disabled] { background: var(--line-2); color: #fff; cursor: not-allowed; }
+.btn.secondary { background: var(--card); color: var(--ink); border: 1px solid var(--line-2); }
+.btn.secondary:hover { background: var(--bg); }
+.btn.ghost { background: transparent; color: var(--ink-2); }
+.btn.ghost:hover { background: var(--line); }
+.btn.ghost[disabled] { background: transparent; color: var(--ink-3); }
+.btn.block { width: 100%; }
+.btn.lg { min-height: 54px; font-size: 1rem; }
+.btn.wa { background: #128c4a; } .btn.wa:hover { background: #0e743d; }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+.actions.center { justify-content: center; margin-top: 28px; }
+.chip { border: 1px solid var(--line-2); background: var(--card); border-radius: 999px; padding: 9px 14px; font: inherit; font-size: .88rem; cursor: pointer; color: var(--ink-2); white-space: nowrap; }
+.chip[aria-pressed="true"] { border-color: var(--brand); background: var(--brand-soft); color: var(--brand); font-weight: 600; }
+.choice-row { display: flex; flex-wrap: wrap; gap: 8px; }
+label.field { display: block; font-weight: 600; font-size: .88rem; margin: 14px 0 6px; }
+input[type="date"], input[type="number"], input.text, textarea { width: 100%; font: inherit; font-size: .95rem; padding: 11px 12px; border: 1px solid var(--line-2); border-radius: 10px; background: var(--card); color: var(--ink); }
+input:focus, textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px rgba(37,70,216,.15); }
+input:disabled { background: var(--bg); color: var(--ink-3); }
+:focus-visible { outline: 3px solid rgba(37,70,216,.35); outline-offset: 2px; }
+
+/* Welcome */
+.hero { margin-bottom: 22px; }
+.hero h1 { font-size: 2.05rem; margin-top: 14px; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 18px; list-style: none; padding: 0; margin: 14px 0 0; font-size: .88rem; color: var(--ink-2); font-weight: 500; }
+.meta li::before { content: "✓"; color: var(--ready); font-weight: 700; margin-right: 6px; }
+.form { padding: 22px; box-shadow: var(--shadow); }
+.field-label { font-weight: 650; font-size: .92rem; margin-bottom: 10px; }
+.rcards { display: grid; gap: 8px; }
+.rcard { display: flex; align-items: center; gap: 12px; width: 100%; text-align: left; border: 1.5px solid var(--line); background: var(--card); border-radius: 12px; padding: 12px 14px; font: inherit; cursor: pointer; color: var(--ink); transition: border-color .15s; }
+.rcard:hover { border-color: var(--line-2); }
+.rcard b { display: block; font-size: .95rem; font-weight: 600; }
+.rcard small { display: block; font-size: .8rem; color: var(--ink-2); margin-top: 1px; }
+.rcard .radio { flex: none; width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--line-2); }
+.rcard[aria-pressed="true"] { border-color: var(--brand); background: var(--brand-soft); }
+.rcard[aria-pressed="true"] .radio { border-color: var(--brand); box-shadow: inset 0 0 0 3px #fff; background: var(--brand); }
+.date-row { display: flex; gap: 8px; align-items: center; }
+.date-row input { flex: 1; }
+.steps { list-style: none; counter-reset: s; padding: 0; margin: 28px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.steps li { counter-increment: s; font-size: .82rem; color: var(--ink-2); line-height: 1.4; }
+.steps li::before { content: counter(s); display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--card); border: 1px solid var(--line-2); font-weight: 700; font-size: .75rem; color: var(--ink); margin-bottom: 8px; }
+.steps b { display: block; color: var(--ink); font-size: .86rem; margin-bottom: 2px; }
+.hint { font-size: .84rem; color: var(--ink-2); margin-top: 22px; padding: 12px 14px; background: var(--card); border: 1px dashed var(--line-2); border-radius: 12px; }
+
+/* Question */
+main:has(.bottombar) { padding-bottom: 120px; }
+.q-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.section-chip { font-size: .8rem; font-weight: 700; color: var(--brand); background: var(--brand-soft); padding: 5px 10px; border-radius: 99px; }
+.section-chip span { font-weight: 500; color: var(--ink-2); }
+.count { font-weight: 700; font-variant-numeric: tabular-nums; }
+.count span { color: var(--ink-3); font-weight: 500; }
+.bar { height: 6px; background: var(--line); border-radius: 99px; overflow: hidden; }
+.bar > i { display: block; height: 100%; background: linear-gradient(90deg, var(--brand), #4f6ef7); border-radius: 99px; transition: width .3s ease; }
+.prompt { font-size: 1.3rem; font-weight: 650; line-height: 1.4; margin: 22px 0 16px; letter-spacing: -.01em; }
+.text-card { border-radius: 14px; padding: 14px 16px; margin-top: 20px; white-space: pre-line; line-height: 1.55; font-size: 1rem; }
+.text-card .kind { display: block; font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--ink-3); margin-bottom: 6px; }
+.text-card.sign { background: #fffdf2; border: 1px solid #f5e1a4; font-weight: 600; box-shadow: inset 4px 0 0 #f2c94c; }
+.text-card.sms { background: #effaf3; border: 1px solid #c9ecd6; border-radius: 16px 16px 16px 4px; max-width: 88%; }
+.text-card.email, .text-card.ad, .text-card.ads { background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow-sm); }
+.choices { display: grid; gap: 10px; }
+.option { display: flex; align-items: center; gap: 14px; width: 100%; text-align: left; border: 1.5px solid var(--line); background: var(--card); border-radius: 14px; padding: 14px 16px; font: inherit; font-size: 1rem; cursor: pointer; color: var(--ink); min-height: 56px; box-shadow: var(--shadow-sm); transition: border-color .15s, background .15s; }
+.option:hover { border-color: var(--line-2); }
+.option .key { flex: none; display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: 8px; border: 1px solid var(--line-2); color: var(--ink-2); font-size: .78rem; font-weight: 700; }
+.option[aria-pressed="true"] { border-color: var(--brand); background: var(--brand-soft); }
+.option[aria-pressed="true"] .key { background: var(--brand); border-color: var(--brand); color: #fff; }
+.idk { display: block; margin: 14px auto 0; background: none; border: 0; font: inherit; font-size: .9rem; color: var(--ink-2); padding: 8px 12px; border-radius: 8px; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line-2); }
+.idk[aria-pressed="true"] { color: var(--brand); font-weight: 650; text-decoration-color: var(--brand); background: var(--brand-soft); }
+.bottombar { position: fixed; left: 0; right: 0; bottom: 0; background: rgba(255,255,255,.92); backdrop-filter: blur(8px); border-top: 1px solid var(--line); padding: 12px 20px calc(12px + env(safe-area-inset-bottom)); z-index: 20; }
+.bottombar-inner { max-width: 580px; margin: 0 auto; display: flex; justify-content: space-between; gap: 10px; }
+.bottombar .btn:not(.ghost) { min-width: 150px; }
+
+/* Self check */
+.cando { padding: 16px 0; border-top: 1px solid var(--line); }
+.cando:first-child { border-top: 0; padding-top: 0; }
+.cando:last-child { padding-bottom: 0; }
+.cando .lbl { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--brand); }
+.cando p { margin: 6px 0 12px; }
+.seg { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line-2); border-radius: 10px; overflow: hidden; }
+.seg button { font: inherit; font-size: .82rem; padding: 10px 4px; border: 0; border-left: 1px solid var(--line-2); background: var(--card); color: var(--ink-2); cursor: pointer; }
+.seg button:first-child { border-left: 0; }
+.seg button[aria-pressed="true"] { background: var(--brand); color: #fff; font-weight: 650; }
+
+/* Result */
+.verdict { border-radius: 20px; padding: 22px; border: 1px solid; box-shadow: var(--shadow); background: var(--card); }
+.verdict.ready  { border-color: var(--ready-line);  background: linear-gradient(180deg, var(--ready-soft), #fff 70%); }
+.verdict.almost { border-color: var(--almost-line); background: linear-gradient(180deg, var(--almost-soft), #fff 70%); }
+.verdict.notyet { border-color: var(--notyet-line); background: linear-gradient(180deg, var(--notyet-soft), #fff 70%); }
+.v-top { display: flex; justify-content: space-between; align-items: center; }
+.tag { display: inline-flex; align-items: center; gap: 7px; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; padding: 5px 10px; border-radius: 99px; background: #fff; border: 1px solid currentColor; }
+.tag i { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.verdict.ready .tag { color: var(--ready); } .verdict.almost .tag { color: var(--almost); } .verdict.notyet .tag { color: var(--notyet); }
+.v-exam { font-size: .8rem; color: var(--ink-2); font-weight: 600; }
+.v-advice { color: var(--ink-2); }
+.scorebox { display: flex; align-items: center; gap: 18px; margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line); }
+.score { display: flex; align-items: center; gap: 8px; }
+.score b { font-size: 2.8rem; line-height: 1; letter-spacing: -.04em; font-weight: 800; font-variant-numeric: tabular-nums; }
+.score span { font-size: .78rem; color: var(--ink-2); line-height: 1.3; }
+.score-note { font-size: .85rem; color: var(--ink-2); line-height: 1.5; border-left: 1px solid var(--line); padding-left: 18px; }
+.score-note b { color: var(--ink); }
+.meter { position: relative; height: 26px; margin: 16px 0 4px; }
+.meter .track { position: absolute; top: 9px; left: 0; right: 0; height: 8px; background: var(--line); border-radius: 99px; }
+.meter .range { position: absolute; top: 9px; height: 8px; background: rgba(37,70,216,.25); border-radius: 99px; }
+.meter .dot { position: absolute; top: 3px; width: 20px; height: 20px; margin-left: -10px; background: var(--brand); border: 3px solid #fff; border-radius: 50%; box-shadow: 0 1px 4px rgba(15,23,42,.3); }
+.meter .pass { position: absolute; top: 2px; height: 22px; width: 2px; margin-left: -1px; background: var(--ink); border-radius: 2px; }
+.scale { position: relative; height: 16px; font-size: .7rem; color: var(--ink-3); }
+.scale span { position: absolute; }
+.scale span:nth-child(1) { left: 0; } .scale span:nth-child(2) { left: 60%; transform: translateX(-50%); color: var(--ink); font-weight: 700; } .scale span:nth-child(3) { right: 0; }
+ul.reasons { margin: 14px 0 0; padding: 0; list-style: none; font-size: .86rem; color: var(--ink-2); }
+ul.reasons li { padding-left: 18px; position: relative; margin: 5px 0; line-height: 1.45; }
+ul.reasons li::before { content: ""; position: absolute; left: 4px; top: .55em; width: 6px; height: 6px; border-radius: 50%; background: var(--ink-3); }
+
+.rec { display: grid; grid-template-columns: 32px 1fr; gap: 14px; }
+.rec .num { width: 32px; height: 32px; border-radius: 10px; display: grid; place-items: center; background: var(--brand-soft); color: var(--brand); font-weight: 800; font-size: .9rem; }
+.rec p { margin: 4px 0 10px; color: var(--ink-2); }
+.rec-foot { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: baseline; font-size: .78rem; }
+.rec .mins { font-weight: 700; color: var(--brand); white-space: nowrap; }
+.rec .where { color: var(--ink-3); }
+
+.skill { display: grid; grid-template-columns: 9.5rem 1fr 3rem; align-items: center; gap: 12px; margin: 10px 0; font-size: .9rem; }
+.skill .sbar { height: 8px; background: var(--line); border-radius: 99px; overflow: hidden; }
+.skill .sbar i { display: block; height: 100%; border-radius: 99px; background: var(--brand); }
+.skill .sbar i.est { background: repeating-linear-gradient(135deg, #6d86ee 0 5px, #a5b6f5 5px 9px); }
+.skill .sbar i.low { background: var(--notyet); }
+.skill b { text-align: right; font-variant-numeric: tabular-nums; font-size: .88rem; }
+.legend { font-size: .75rem; font-weight: 650; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-3); }
+.legend .muted { text-transform: none; letter-spacing: 0; font-weight: 500; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 12px; }
+
+.accordion { border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); overflow: hidden; }
+.accordion details { border-top: 1px solid var(--line); padding: 0 18px; }
+.accordion details:first-child { border-top: 0; }
+.accordion summary { cursor: pointer; font-weight: 600; font-size: .93rem; padding: 15px 0; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+.accordion summary::-webkit-details-marker { display: none; }
+.accordion summary::after { content: "+"; color: var(--ink-3); font-weight: 400; font-size: 1.2rem; line-height: 1; }
+.accordion details[open] summary::after { content: "–"; }
+.accordion summary .muted { font-weight: 500; font-size: .82rem; margin-left: auto; }
+.accordion details[open] { padding-bottom: 14px; }
+details:not(.accordion details) { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 18px; margin-top: 12px; }
+details:not(.accordion details) summary { cursor: pointer; font-weight: 600; }
+.review-item { border-top: 1px solid var(--line); padding: 12px 0; }
+.review-item:first-of-type { border-top: 0; padding-top: 0; }
+.review-item .quote { white-space: pre-line; margin: 6px 0; padding: 8px 10px; background: var(--bg); border-radius: 8px; }
+.ok { color: var(--ready); font-weight: 650; } .bad { color: var(--notyet); font-weight: 650; }
+
+/* Tables, KPIs (insights + batch board) */
+table { width: 100%; border-collapse: collapse; font-size: .84rem; }
+th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); }
+th { color: var(--ink-3); font-weight: 600; font-size: .75rem; text-transform: uppercase; letter-spacing: .04em; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.flag { font-size: .72rem; padding: 2px 7px; border-radius: 6px; background: var(--almost-soft); color: var(--almost); font-weight: 650; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 8px; }
+.kpi { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+.kpi b { display: block; font-size: 1.5rem; letter-spacing: -.02em; }
+.kpi span { font-size: .78rem; color: var(--ink-2); }
+.toast { position: fixed; left: 50%; bottom: 96px; transform: translateX(-50%); background: var(--ink); color: #fff; padding: 10px 16px; border-radius: 10px; font-size: .88rem; z-index: 30; box-shadow: var(--shadow); }
+
+textarea { resize: vertical; min-height: 110px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .78rem; }
+.pill { display: inline-block; font-size: .72rem; font-weight: 700; padding: 3px 9px; border-radius: 99px; white-space: nowrap; }
+.pill.ready { background: var(--ready-soft); color: var(--ready); }
+.pill.almost { background: var(--almost-soft); color: var(--almost); }
+.pill.notyet { background: var(--notyet-soft); color: var(--notyet); }
+.learner { border-left: 4px solid var(--line); }
+.learner.p1 { border-left-color: var(--notyet); }
+.learner.p2 { border-left-color: var(--almost); }
+.learner .lhead { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 4px; }
+.learner .action { margin-top: 8px; font-weight: 600; }
+td.cell { font-weight: 650; }
+.c-hi { background: var(--ready-soft); color: var(--ready); }
+.c-mid { background: var(--almost-soft); color: var(--almost); }
+.c-lo { background: var(--notyet-soft); color: var(--notyet); }
+
+@media (max-width: 460px) {
+  main { padding: 22px 16px 40px; }
+  h1, .hero h1 { font-size: 1.6rem; }
+  .steps { grid-template-columns: 1fr; gap: 10px; }
+  .steps li { display: grid; grid-template-columns: 24px 1fr; column-gap: 10px; }
+  .steps li::before { margin: 0; grid-row: span 2; }
+  .skill { grid-template-columns: 7.8rem 1fr 2.6rem; font-size: .85rem; }
+  .two { grid-template-columns: 1fr; }
+  .score b { font-size: 2.4rem; }
+  .seg button { font-size: .76rem; }
+}
+.focus .foot { display: none; }
+.score-note { white-space: nowrap; }
+.accordion summary { align-items: center; }
+.accordion summary .muted { white-space: nowrap; }
+</style>
+  <script>
+    // Optional: send events to a backend (Supabase / PostHog / webhook). Leave empty for local-only.
+    window.ANALYTICS_ENDPOINT = '';
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <a href="#" class="brand" data-action="home" aria-label="Home">
+      <span class="brand-mark" aria-hidden="true">A1</span>
+      <span>Am I exam-ready?</span>
+    </a>
+  </header>
+  <main id="app" aria-live="polite"></main>
+  <footer class="foot">
+    <span>A readiness check for Goethe-Zertifikat A1 and ÖSD Zertifikat A1. Not affiliated with Goethe-Institut or ÖSD.</span>
+    <span><a href="#batch" data-action="batch">Trainer batch board</a> · <a href="#insights" data-action="insights">Team insights</a></span>
+  </footer>
+  <script type="module">
+// ═════════════════════════════════════════════════════════════
+// ITEM BANK (questions, self-rating statements)
+// ═════════════════════════════════════════════════════════════
+// Item bank for the A1 readiness check.
+//
+// Every item carries:
+//   skill  – 'vocab' | 'grammar' | 'reading'   (what the check measures)
+//   level  – 1 (core A1), 2 (typical exam item), 3 (upper A1 / exam-hard)
+//   tag    – the micro-skill used to pick practice recommendations (see recommend.js)
+//   answer – index of the correct option
+//
+// The bank holds 5 items per skill per level (45 total). Each attempt draws a
+// parallel form of 15 items using the same blueprint (2 × L1, 2 × L2, 1 × L3 per
+// skill), so retakes see new questions but the difficulty mix stays constant.
+//
+// Content is written against Goethe-Zertifikat A1: Start Deutsch 1 / ÖSD ZA1
+// topics (self & family, numbers & time, shopping, travel, work & health) and
+// the reading task types those exams use (short messages, signs, small ads).
+
+const ITEMS = [
+  // ───────────────────────── VOCABULARY ─────────────────────────
+  // Level 1
+  {
+    id: 'v01', skill: 'vocab', level: 1, tag: 'people-family',
+    prompt: 'Die Mutter von meiner Mutter ist meine …',
+    options: ['Oma', 'Tante', 'Schwester'], answer: 0,
+    explain: 'Oma (Großmutter) = grandmother. Tante = aunt, Schwester = sister.',
+  },
+  {
+    id: 'v02', skill: 'vocab', level: 1, tag: 'numbers-time',
+    prompt: 'Welche Zahl ist „siebzehn“?',
+    options: ['17', '70', '7'], answer: 0,
+    explain: 'sieben + zehn = siebzehn (17). 70 = siebzig, 7 = sieben.',
+  },
+  {
+    id: 'v03', skill: 'vocab', level: 1, tag: 'days-dates',
+    prompt: 'Der Tag nach Montag ist …',
+    options: ['Dienstag', 'Mittwoch', 'Sonntag'], answer: 0,
+    explain: 'Montag → Dienstag → Mittwoch. Sonntag comes before Montag.',
+  },
+  {
+    id: 'v04', skill: 'vocab', level: 1, tag: 'travel-transport',
+    prompt: 'Sie möchten mit dem Zug fahren. Wohin gehen Sie?',
+    options: ['Zum Bahnhof', 'Zur Apotheke', 'Zum Flughafen'], answer: 0,
+    explain: 'Trains leave from the Bahnhof. Apotheke = pharmacy, Flughafen = airport.',
+  },
+  {
+    id: 'v05', skill: 'vocab', level: 1, tag: 'everyday-phrases',
+    prompt: 'Jemand sagt: „Vielen Dank!“ Sie antworten:',
+    options: ['Bitte schön!', 'Gute Nacht!', 'Entschuldigung!'], answer: 0,
+    explain: '„Bitte schön“ / „Bitte“ is the normal reply to „Danke“.',
+  },
+  // Level 2
+  {
+    id: 'v06', skill: 'vocab', level: 2, tag: 'food-shopping',
+    prompt: 'Im Restaurant sagt ein Gast: „Die Rechnung, bitte!“ Was möchte er?',
+    options: ['bezahlen', 'bestellen', 'essen'], answer: 0,
+    explain: 'Die Rechnung = the bill, so the guest wants to pay (bezahlen). Bestellen = to order.',
+  },
+  {
+    id: 'v07', skill: 'vocab', level: 2, tag: 'work-health',
+    prompt: 'Ich bin krank. Ich rufe beim Arzt an und brauche einen …',
+    options: ['Termin', 'Urlaub', 'Fahrschein'], answer: 0,
+    explain: 'Ein Termin = an appointment. Urlaub = holiday, Fahrschein = ticket.',
+  },
+  {
+    id: 'v08', skill: 'vocab', level: 2, tag: 'food-shopping',
+    prompt: 'Das Gegenteil von „teuer“ ist …',
+    options: ['billig', 'groß', 'alt'], answer: 0,
+    explain: 'teuer (expensive) ↔ billig / günstig (cheap).',
+  },
+  {
+    id: 'v09', skill: 'vocab', level: 2, tag: 'numbers-time',
+    prompt: 'Ihre Telefonnummer endet mit „achtundsechzig“. Welche Zahl ist das?',
+    options: ['68', '86', '98'], answer: 0,
+    explain: 'German says the ones digit first: acht-und-sechzig = 8 + 60 = 68. A classic exam trap in Hören.',
+  },
+  {
+    id: 'v10', skill: 'vocab', level: 2, tag: 'food-shopping',
+    prompt: 'Welches Wort passt nicht?',
+    options: ['Gabel', 'Hose', 'Jacke'], answer: 0,
+    explain: 'Hose (trousers) and Jacke (jacket) are clothes; Gabel is a fork.',
+  },
+  // Level 3
+  {
+    id: 'v11', skill: 'vocab', level: 3, tag: 'numbers-time',
+    prompt: 'Es ist 14:30 Uhr. Man kann auch sagen: Es ist halb …',
+    options: ['drei', 'zwei', 'vierzehn'], answer: 0,
+    explain: '„halb drei“ = half way to three = 2:30 / 14:30. Very common in announcements.',
+  },
+  {
+    id: 'v12', skill: 'vocab', level: 3, tag: 'numbers-time',
+    prompt: '„Viertel vor acht“ – wie spät ist es?',
+    options: ['7:45', '8:15', '7:15'], answer: 0,
+    explain: 'Viertel vor acht = a quarter before eight = 7:45. Viertel nach acht = 8:15.',
+  },
+  {
+    id: 'v13', skill: 'vocab', level: 3, tag: 'travel-transport',
+    prompt: 'Der Zug fährt um 9 Uhr ab. 9 Uhr ist die …',
+    options: ['Abfahrt', 'Ankunft', 'Ausfahrt'], answer: 0,
+    explain: 'abfahren → die Abfahrt (departure). ankommen → die Ankunft (arrival).',
+  },
+  {
+    id: 'v14', skill: 'vocab', level: 3, tag: 'work-health',
+    prompt: 'Der Arzt sagt: „Nehmen Sie die Tabletten dreimal täglich.“ Wie oft?',
+    options: ['3 × pro Tag', '3 × pro Woche', 'alle 3 Tage'], answer: 0,
+    explain: 'täglich = every day, so dreimal täglich = three times a day.',
+  },
+  {
+    id: 'v15', skill: 'vocab', level: 3, tag: 'people-family',
+    prompt: 'Ich komme aus Indien und spreche seit meiner Kindheit Hindi. Hindi ist meine …',
+    options: ['Muttersprache', 'Fremdsprache', 'Heimat'], answer: 0,
+    explain: 'Muttersprache = mother tongue. Fremdsprache = foreign language. Common in Sprechen Teil 1.',
+  },
+
+  // ───────────────────────── GRAMMAR ─────────────────────────
+  // Level 1
+  {
+    id: 'g01', skill: 'grammar', level: 1, tag: 'verb-forms',
+    prompt: 'Du ___ aus Indien.',
+    options: ['kommst', 'kommt', 'komme'], answer: 0,
+    explain: 'du → -st: du kommst. (er/sie kommt, ich komme)',
+  },
+  {
+    id: 'g02', skill: 'grammar', level: 1, tag: 'verb-forms',
+    prompt: 'Wir ___ Krankenschwestern.',
+    options: ['sind', 'seid', 'ist'], answer: 0,
+    explain: 'sein: wir sind, ihr seid, er/sie ist.',
+  },
+  {
+    id: 'g03', skill: 'grammar', level: 1, tag: 'w-questions',
+    prompt: '___ heißen Sie? – Ich heiße Meera Shah.',
+    options: ['Wie', 'Wo', 'Wer'], answer: 0,
+    explain: '„Wie heißen Sie?“ asks for the name. Wo = where, Wer = who.',
+  },
+  {
+    id: 'g04', skill: 'grammar', level: 1, tag: 'articles-cases',
+    prompt: 'Das ist ___ Tisch.',
+    options: ['ein', 'eine', 'einen'], answer: 0,
+    explain: 'der Tisch (masculine), nominative after „Das ist“ → ein Tisch.',
+  },
+  {
+    id: 'g05', skill: 'grammar', level: 1, tag: 'verb-forms',
+    prompt: 'Er ___ zwei Kinder.',
+    options: ['hat', 'habt', 'haben'], answer: 0,
+    explain: 'haben: er/sie hat, ihr habt, wir/sie haben.',
+  },
+  // Level 2
+  {
+    id: 'g06', skill: 'grammar', level: 2, tag: 'articles-cases',
+    prompt: 'Ich kaufe ___ Apfel.',
+    options: ['einen', 'ein', 'eine'], answer: 0,
+    explain: 'der Apfel is masculine and the object of „kaufen“ → accusative: einen Apfel.',
+  },
+  {
+    id: 'g07', skill: 'grammar', level: 2, tag: 'modal-verbs',
+    prompt: 'Ich ___ heute nicht kommen. Ich bin krank.',
+    options: ['kann', 'kannst', 'können'], answer: 0,
+    explain: 'können: ich kann (no ending for ich/er with modal verbs), du kannst, wir können.',
+  },
+  {
+    id: 'g08', skill: 'grammar', level: 2, tag: 'negation',
+    prompt: 'Ich habe ___ Auto. Ich fahre mit dem Fahrrad.',
+    options: ['kein', 'nicht', 'keine'], answer: 0,
+    explain: 'Nouns with ein/kein are negated with kein-. das Auto → kein Auto.',
+  },
+  {
+    id: 'g09', skill: 'grammar', level: 2, tag: 'possessives',
+    prompt: 'Das ist Anna und das ist ___ Bruder.',
+    options: ['ihr', 'sein', 'ihre'], answer: 0,
+    explain: 'Anna → ihr (her). der Bruder is masculine → ihr Bruder. „sein“ = his.',
+  },
+  {
+    id: 'g10', skill: 'grammar', level: 2, tag: 'prepositions',
+    prompt: 'Der Deutschkurs beginnt ___ Montag.',
+    options: ['am', 'um', 'im'], answer: 0,
+    explain: 'am + day (am Montag), um + clock time (um 9 Uhr), im + month (im Mai).',
+  },
+  // Level 3
+  {
+    id: 'g11', skill: 'grammar', level: 3, tag: 'word-order',
+    prompt: 'Welcher Satz ist richtig?',
+    options: ['Morgen fahre ich nach Berlin.', 'Morgen ich fahre nach Berlin.', 'Morgen ich nach Berlin fahre.'], answer: 0,
+    explain: 'The verb is always in position 2. If „Morgen“ comes first, the subject moves after the verb.',
+  },
+  {
+    id: 'g12', skill: 'grammar', level: 3, tag: 'word-order',
+    prompt: 'Welcher Satz ist richtig?',
+    options: ['Der Zug kommt um 8 Uhr an.', 'Der Zug ankommt um 8 Uhr.', 'Der Zug an um 8 Uhr kommt.'], answer: 0,
+    explain: 'Separable verb ankommen: the verb goes in position 2, the prefix „an“ goes to the end.',
+  },
+  {
+    id: 'g13', skill: 'grammar', level: 3, tag: 'modal-verbs',
+    prompt: 'Welcher Satz ist richtig?',
+    options: ['Ich möchte heute Abend ins Kino gehen.', 'Ich möchte gehen heute Abend ins Kino.', 'Ich gehe möchte heute Abend ins Kino.'], answer: 0,
+    explain: 'Modal verb in position 2, the second verb (infinitive) at the end of the sentence.',
+  },
+  {
+    id: 'g14', skill: 'grammar', level: 3, tag: 'verb-forms',
+    prompt: '___ Sie bitte langsam!',
+    options: ['Sprechen', 'Sprecht', 'Sprich'], answer: 0,
+    explain: 'Formal request (Sie-imperative): verb first + Sie → „Sprechen Sie bitte langsam!“ – useful in Sprechen Teil 3.',
+  },
+  {
+    id: 'g15', skill: 'grammar', level: 3, tag: 'prepositions',
+    prompt: 'Ich fahre mit ___ Bus zur Arbeit.',
+    options: ['dem', 'den', 'der'], answer: 0,
+    explain: '„mit“ always takes the dative. der Bus → mit dem Bus.',
+  },
+
+  // ───────────────────────── READING ─────────────────────────
+  // Level 1
+  {
+    id: 'r01', skill: 'reading', level: 1, tag: 'signs-notices',
+    text: { kind: 'sign', body: 'Bitte nicht rauchen!' },
+    prompt: 'Hier darf man rauchen.',
+    options: ['Richtig', 'Falsch'], answer: 1,
+    explain: '„Bitte nicht rauchen“ = please do not smoke.',
+  },
+  {
+    id: 'r02', skill: 'reading', level: 1, tag: 'messages-emails',
+    text: { kind: 'sms', body: 'Hallo Priya, ich komme heute später – erst um 19 Uhr. Bis dann! Tom' },
+    prompt: 'Wann kommt Tom?',
+    options: ['Um 19 Uhr', 'Um 9 Uhr', 'Um 17 Uhr'], answer: 0,
+    explain: '„erst um 19 Uhr“ = not until 7 pm.',
+  },
+  {
+    id: 'r03', skill: 'reading', level: 1, tag: 'ads-info',
+    text: { kind: 'sign', body: 'Kantine – heute: Reis mit Gemüse … 4,50 €' },
+    prompt: 'Das Essen kostet heute 4,50 Euro.',
+    options: ['Richtig', 'Falsch'], answer: 0,
+    explain: 'The price on the notice is 4,50 € (German uses a comma for decimals).',
+  },
+  {
+    id: 'r04', skill: 'reading', level: 1, tag: 'signs-notices',
+    text: { kind: 'sign', body: 'Toiletten im 1. Stock ↑' },
+    prompt: 'Die Toiletten sind im Erdgeschoss.',
+    options: ['Richtig', 'Falsch'], answer: 1,
+    explain: '1. Stock = first floor (one floor up). Erdgeschoss = ground floor.',
+  },
+  {
+    id: 'r05', skill: 'reading', level: 1, tag: 'messages-emails',
+    text: { kind: 'email', body: 'Liebe Frau Weber,\nich bin krank und kann morgen leider nicht arbeiten.\nViele Grüße\nRavi Kumar' },
+    prompt: 'Warum arbeitet Ravi morgen nicht?',
+    options: ['Er ist krank.', 'Er hat Urlaub.', 'Er hat einen Termin.'], answer: 0,
+    explain: '„ich bin krank“ = I am ill.',
+  },
+  // Level 2
+  {
+    id: 'r06', skill: 'reading', level: 2, tag: 'ads-info',
+    text: { kind: 'sign', body: 'Stadt-Apotheke\nMo–Fr  8:00–18:00 Uhr\nSa  8:00–13:00 Uhr' },
+    prompt: 'Sie können am Samstag um 15 Uhr in der Apotheke Medikamente kaufen.',
+    options: ['Richtig', 'Falsch'], answer: 1,
+    explain: 'On Saturday it closes at 13:00, so 15:00 is too late.',
+  },
+  {
+    id: 'r07', skill: 'reading', level: 2, tag: 'messages-emails',
+    text: { kind: 'email', body: 'Hallo Anna,\nam Samstag mache ich eine Party. Sie beginnt um 20 Uhr. Kannst du einen Salat mitbringen? Getränke habe ich schon.\nLiebe Grüße\nLena' },
+    prompt: 'Anna soll Getränke mitbringen.',
+    options: ['Richtig', 'Falsch'], answer: 1,
+    explain: 'Lena asks for a salad – „Getränke habe ich schon“ = I already have drinks.',
+  },
+  {
+    id: 'r08', skill: 'reading', level: 2, tag: 'ads-info',
+    text: { kind: 'ad', body: 'Zimmer frei! 18 m², möbliert, 350 € warm, ab 1. Mai.\nNur für Nichtraucher.\nTel. 0176 443321' },
+    prompt: 'Für wen ist das Zimmer?',
+    options: ['Für Nichtraucher', 'Für Familien mit Kindern', 'Für Studenten mit Auto'], answer: 0,
+    explain: '„Nur für Nichtraucher“ = only for non-smokers.',
+  },
+  {
+    id: 'r09', skill: 'reading', level: 2, tag: 'signs-notices',
+    text: { kind: 'sign', body: 'Gleis 3: Der ICE nach München hat heute ca. 20 Minuten Verspätung.' },
+    prompt: 'Der Zug nach München ist heute pünktlich.',
+    options: ['Richtig', 'Falsch'], answer: 1,
+    explain: 'Verspätung = delay. The train is about 20 minutes late.',
+  },
+  {
+    id: 'r10', skill: 'reading', level: 2, tag: 'ads-info',
+    text: { kind: 'ad', body: 'Deutschkurs A1 – Montag bis Donnerstag, 18–20 Uhr.\nKursbeginn: 3. März.\nAnmeldung im Büro oder online.' },
+    prompt: 'Wo kann man sich anmelden?',
+    options: ['Im Büro oder online', 'Nur im Büro', 'Nur am Telefon'], answer: 0,
+    explain: '„Anmeldung im Büro oder online“ – both are possible.',
+  },
+  // Level 3
+  {
+    id: 'r11', skill: 'reading', level: 3, tag: 'ads-info',
+    text: { kind: 'sign', body: 'Praxis Dr. Schulz – Sprechzeiten\nMo, Di, Do: 8–12 Uhr und 15–18 Uhr\nMi und Fr: nur vormittags' },
+    prompt: 'Sie können am Mittwoch um 16 Uhr in die Praxis kommen.',
+    options: ['Richtig', 'Falsch'], answer: 1,
+    explain: 'On Wednesday the practice is only open in the morning (nur vormittags).',
+  },
+  {
+    id: 'r12', skill: 'reading', level: 3, tag: 'ads-info',
+    text: { kind: 'ads', body: 'a) Deutsch intensiv: Montag bis Freitag, 9–13 Uhr\nb) Deutsch für Berufstätige: Samstag und Sonntag, 10–14 Uhr' },
+    prompt: 'Sie arbeiten von Montag bis Freitag und möchten am Wochenende Deutsch lernen. Welche Anzeige passt?',
+    options: ['Anzeige b', 'Anzeige a', 'Keine Anzeige'], answer: 0,
+    explain: 'Samstag und Sonntag = the weekend → ad b. This mirrors Lesen Teil 2.',
+  },
+  {
+    id: 'r13', skill: 'reading', level: 3, tag: 'messages-emails',
+    text: { kind: 'email', body: 'Liebe Kolleginnen und Kollegen,\nunser Teamessen ist nicht am Freitag, sondern schon am Donnerstag um 19 Uhr. Das Restaurant bleibt gleich. Bitte sagt mir bis Dienstag, ob ihr kommt.\nJana' },
+    prompt: 'Bis wann soll man Jana antworten?',
+    options: ['Bis Dienstag', 'Bis Donnerstag', 'Bis Freitag'], answer: 0,
+    explain: '„Bitte sagt mir bis Dienstag …“ – Donnerstag is the dinner, Freitag was the old date.',
+  },
+  {
+    id: 'r14', skill: 'reading', level: 3, tag: 'signs-notices',
+    text: { kind: 'sign', body: 'Bürgeramt: Termine nur online.\nOhne Termin keine Bearbeitung.\nBitte bringen Sie Ihren Pass mit.' },
+    prompt: 'Was ist richtig?',
+    options: ['Man braucht einen Termin und den Pass.', 'Man kann auch ohne Termin kommen.', 'Man muss online bezahlen.'], answer: 0,
+    explain: '„Termine nur online“ + „Ohne Termin keine Bearbeitung“ + „bringen Sie Ihren Pass mit“.',
+  },
+  {
+    id: 'r15', skill: 'reading', level: 3, tag: 'signs-notices',
+    text: { kind: 'sign', body: 'Liebe Gäste,\nFrühstück gibt es von 6:30 bis 10:00 Uhr, am Sonntag bis 11:00 Uhr.\nDer Frühstücksraum ist im Erdgeschoss.' },
+    prompt: 'Am Sonntag um 10:30 Uhr gibt es noch Frühstück.',
+    options: ['Richtig', 'Falsch'], answer: 0,
+    explain: 'On Sunday breakfast runs until 11:00, so 10:30 is fine.',
+  },
+];
+
+const SKILLS = {
+  vocab:   { label: 'Vocabulary', de: 'Wortschatz' },
+  grammar: { label: 'Grammar',    de: 'Grammatik' },
+  reading: { label: 'Reading',    de: 'Lesen' },
+};
+
+// Self-assessment ("can-do" statements, paraphrased from CEFR A1 descriptors)
+// for the skills a 15-question tap test cannot measure directly.
+const CAN_DO = [
+  {
+    id: 'selfListening', label: 'Listening (Hören)',
+    statement: 'When people speak slowly and clearly, I can understand short announcements and phone messages – e.g. a train delay or an appointment time.',
+  },
+  {
+    id: 'selfWriting', label: 'Writing (Schreiben)',
+    statement: 'I can fill in a simple form and write a short message of about 30 words – e.g. inviting a friend or telling my teacher I am sick.',
+  },
+  {
+    id: 'selfSpeaking', label: 'Speaking (Sprechen)',
+    statement: 'I can introduce myself, spell my name, and ask and answer simple questions about daily life.',
+  },
+];
+
+const CAN_DO_SCALE = ['Not yet', 'With help', 'Mostly', 'Yes, easily'];
+
+// ═════════════════════════════════════════════════════════════
+// READINESS MODEL (all assumptions live in CONFIG)
+// ═════════════════════════════════════════════════════════════
+// The readiness model. Pure functions only – no DOM, no storage – so it can be
+// unit-tested with `node --test` and changed safely in a live session.
+//
+// Every assumption lives in CONFIG. Changing what "ready" means is a one-line edit.
+
+const CONFIG = {
+  // Both Goethe-Zertifikat A1: Start Deutsch 1 and ÖSD Zertifikat A1 use 60% as the pass mark.
+  passMark: 60,
+
+  // Form blueprint: items per skill per level. 2 easy + 2 medium + 1 hard per skill = 15 items.
+  blueprint: { vocab: [2, 2, 1], grammar: [2, 2, 1], reading: [2, 2, 1] },
+
+  // "Ready" needs the LOW end of the likely range to clear the pass mark –
+  // a 15-question check has real measurement error, and a false "ready" costs
+  // the learner an exam fee and weeks of time. False "not yet" costs one more week of practice.
+  readyNeedsLowerBoundAbovePass: true,
+
+  // Weakest-link rule: each measured skill must be at least this share correct
+  // (0.6 = 3 of 5). Grammar and vocabulary gaps don't stay in one exam part –
+  // they leak into Schreiben and Sprechen.
+  minSkillForReady: 0.6,
+
+  // Below this predicted score the verdict is "not yet"; between this and "ready" it is "almost".
+  almostFloor: 55,
+
+  // Width of the likely range in standard errors (1.0 ≈ 68%).
+  rangeZ: 1.0,
+
+  // Self-reports are known to be optimistic at beginner level, so they never
+  // count for more than 30% of any estimated exam part.
+  // How each real exam part (25 points each) is estimated from what we measure.
+  partModel: {
+    lesen:     { reading: 1.0 },
+    hoeren:    { vocab: 0.5, grammar: 0.2, selfListening: 0.3 },
+    schreiben: { grammar: 0.4, vocab: 0.3, selfWriting: 0.3 },
+    sprechen:  { grammar: 0.35, vocab: 0.35, selfSpeaking: 0.3 },
+  },
+
+  // Extra uncertainty because three of the four parts are partly self-reported.
+  selfReportUncertainty: 1.2,
+
+  exams: {
+    goethe: { label: 'Goethe-Zertifikat A1: Start Deutsch 1', perPartMin: null },
+    // ÖSD ZA1 modules are scored and certified separately, so every part has to clear 60%.
+    osd:    { label: 'ÖSD Zertifikat A1', perPartMin: 0.6 },
+    unsure: { label: 'Not decided yet', perPartMin: null },
+  },
+};
+
+const PART_LABELS = {
+  hoeren: 'Hören (Listening)',
+  lesen: 'Lesen (Reading)',
+  schreiben: 'Schreiben (Writing)',
+  sprechen: 'Sprechen (Speaking)',
+};
+
+// ───────────────────────── Form assembly ─────────────────────────
+
+// Small seeded PRNG so a form can be reproduced from its seed (useful for support and tests).
+function rng(seed) {
+  let a = seed >>> 0;
+  return () => {
+    a |= 0; a = (a + 0x6d2b79f5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function shuffle(arr, rand) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(rand() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+/**
+ * Draw a parallel form from the bank following the blueprint.
+ * Prefers items the learner has not seen recently, so a retake is a fresh check.
+ * Options are shuffled (except Richtig/Falsch, which keep their natural order).
+ */
+function buildForm(bank, { seed = Date.now(), recentlySeen = [], blueprint = CONFIG.blueprint } = {}) {
+  const rand = rng(seed);
+  const seen = new Set(recentlySeen);
+  const form = [];
+  for (const skill of Object.keys(blueprint)) {
+    blueprint[skill].forEach((count, i) => {
+      const level = i + 1;
+      const pool = bank.filter((it) => it.skill === skill && it.level === level);
+      const fresh = shuffle(pool.filter((it) => !seen.has(it.id)), rand);
+      const stale = shuffle(pool.filter((it) => seen.has(it.id)), rand);
+      form.push(...[...fresh, ...stale].slice(0, count));
+    });
+  }
+  return form.map((item) => {
+    if (item.options.length <= 2) return { ...item, order: item.options.map((_, i) => i) };
+    const order = shuffle(item.options.map((_, i) => i), rand);
+    return { ...item, order };
+  });
+}
+
+// ───────────────────────── Scoring ─────────────────────────
+
+/**
+ * responses: [{ itemId, choice (original option index or null), idk: bool, ms }]
+ * self: { selfListening, selfWriting, selfSpeaking } each 0..3
+ */
+function scoreAttempt(form, responses, self = {}, examKey = 'unsure', cfg = CONFIG) {
+  const byId = Object.fromEntries(responses.map((r) => [r.itemId, r]));
+
+  // 1. Measured skills (share correct)
+  const skills = {};
+  for (const item of form) {
+    const s = (skills[item.skill] ??= { correct: 0, total: 0, idk: 0, missed: [] });
+    const r = byId[item.id];
+    const correct = !!r && !r.idk && r.choice === item.answer;
+    s.total += 1;
+    if (correct) s.correct += 1;
+    else s.missed.push(item);
+    if (r?.idk) s.idk += 1;
+  }
+  for (const s of Object.values(skills)) s.share = s.total ? s.correct / s.total : 0;
+
+  // 2. Inputs for the part model (self-reports scaled 0..1)
+  const inputs = {
+    vocab: skills.vocab?.share ?? 0,
+    grammar: skills.grammar?.share ?? 0,
+    reading: skills.reading?.share ?? 0,
+    selfListening: (self.selfListening ?? 0) / 3,
+    selfWriting: (self.selfWriting ?? 0) / 3,
+    selfSpeaking: (self.selfSpeaking ?? 0) / 3,
+  };
+
+  // 3. Estimated exam parts (0..1) and predicted score out of 100 (4 parts × 25)
+  const parts = {};
+  for (const [part, weights] of Object.entries(cfg.partModel)) {
+    parts[part] = Object.entries(weights).reduce((sum, [k, w]) => sum + w * inputs[k], 0);
+  }
+  const predicted = Object.values(parts).reduce((a, b) => a + b, 0) * 25;
+
+  // 4. Uncertainty: binomial standard error on the measured items, with a
+  //    Laplace correction so a perfect or zero score still gets a range.
+  const n = form.length;
+  const k = Object.values(skills).reduce((a, s) => a + s.correct, 0);
+  const p = (k + 1) / (n + 2);
+  const se = 100 * Math.sqrt((p * (1 - p)) / n) * cfg.selfReportUncertainty;
+  const low = clamp(predicted - cfg.rangeZ * se, 0, 100);
+  const high = clamp(predicted + cfg.rangeZ * se, 0, 100);
+
+  const verdict = decide({ predicted, low, skills, parts, examKey }, cfg);
+
+  return {
+    skills, inputs, parts,
+    predicted: Math.round(predicted),
+    range: [Math.round(low), Math.round(high)],
+    correct: k, total: n,
+    idkCount: Object.values(skills).reduce((a, s) => a + s.idk, 0),
+    verdict,
+  };
+}
+
+/** Turn the numbers into a verdict with plain-language reasons. */
+function decide({ predicted, low, skills, parts, examKey }, cfg = CONFIG) {
+  const reasons = [];
+  const weakSkills = Object.entries(skills)
+    .filter(([, s]) => s.share < cfg.minSkillForReady)
+    .map(([k, s]) => ({ skill: k, correct: s.correct, total: s.total }));
+
+  const exam = cfg.exams[examKey] ?? cfg.exams.unsure;
+  const weakParts = exam.perPartMin == null ? [] :
+    Object.entries(parts).filter(([, v]) => v < exam.perPartMin).map(([k]) => k);
+
+  const lowClears = !cfg.readyNeedsLowerBoundAbovePass || low >= cfg.passMark;
+
+  if (predicted >= cfg.passMark && lowClears && weakSkills.length === 0 && weakParts.length === 0) {
+    reasons.push('Even the low end of your likely range clears the 60-point pass mark.');
+    return { level: 'ready', reasons, weakSkills, weakParts };
+  }
+
+  if (predicted < cfg.passMark) reasons.push(`Your estimated score (${Math.round(predicted)}) is below the 60-point pass mark.`);
+  else if (!lowClears) reasons.push(`Your estimate clears 60, but the low end of your range (${Math.round(low)}) does not – that is too close to call.`);
+  for (const w of weakSkills) reasons.push(`${capital(w.skill)}: ${w.correct}/${w.total} – below our safety line of ${Math.round(cfg.minSkillForReady * w.total)}/${w.total}.`);
+  for (const p of weakParts) reasons.push(`${PART_LABELS[p]} looks below 60% – ÖSD scores each module separately.`);
+
+  const level = predicted >= cfg.almostFloor ? 'almost' : 'notyet';
+  return { level, reasons, weakSkills, weakParts };
+}
+
+/** Advice that depends on how close the exam date is. */
+function dateAdvice(level, examDate, now = new Date()) {
+  if (!examDate) {
+    return level === 'ready'
+      ? 'You look ready. Book a date 2–4 weeks out and do one full official model test (Modellsatz) under time before the exam.'
+      : 'Don\'t book yet. Practise the areas below and retake this check – book when you get "Ready" twice in a row.';
+  }
+  const days = Math.ceil((new Date(examDate) - now) / 86400000);
+  if (days < 0) return 'Your exam date has passed. If you need to sit it again, retake this check first to see where you stand.';
+  if (level === 'ready') return `Your exam is in ${days} days. Keep going: one timed Modellsatz this week, and practise speaking out loud.`;
+  if (level === 'almost') return days <= 14
+    ? `Your exam is in ${days} days. Focus only on the top two areas below, and retake this check in a week.`
+    : `Your exam is in ${days} days – enough time to close these gaps. Retake this check in 1–2 weeks.`;
+  return days <= 21
+    ? `Your exam is in ${days} days and you're not there yet. Exam fees are usually non-refundable, but some centres let you move to a later date for a fee if you ask early – check your centre's terms today, and talk to your trainer.`
+    : `Your exam is in ${days} days. That is workable if you practise daily – retake this check every week to track progress.`;
+}
+
+function clamp(x, lo, hi) { return Math.max(lo, Math.min(hi, x)); }
+function capital(skill) { return { vocab: 'Vocabulary', grammar: 'Grammar', reading: 'Reading' }[skill] ?? skill; }
+
+// ═════════════════════════════════════════════════════════════
+// RECOMMENDATIONS (what to practise)
+// ═════════════════════════════════════════════════════════════
+// Turns missed items into 2–3 concrete things to practise.
+//
+// Ranking logic (in plain words):
+//   • Every missed or "I don't know" item adds weight to its micro-skill (tag).
+//   • Missing an EASY item counts more than missing a hard one – it points to a
+//     foundation gap, and foundations are the cheapest points to win back.
+//   • Tags that feed more exam parts get a small boost (impact).
+//   • If fewer than two tags come out of the test, we fill the list from the
+//     weakest self-rated productive skill, because the tap test cannot see
+//     speaking or writing.
+
+const TAGS = {
+  // vocabulary
+  'numbers-time': {
+    title: 'Numbers, prices and clock times',
+    where: 'Hören Teil 1–3 and Lesen – almost every task has a time, price or phone number.',
+    action: 'Say 10 random numbers (21–99) and 5 clock times out loud every day, including „halb drei“ and „Viertel vor acht“. Then write them down from a slow audio.',
+    minutes: 10, impact: 1.3,
+  },
+  'days-dates': {
+    title: 'Days, months and dates',
+    where: 'Hören and Lesen – appointments, opening hours, course dates.',
+    action: 'Write your week in German (Am Montag … um …). Read 3 real opening-hour signs and answer: open on Saturday afternoon?',
+    minutes: 10, impact: 1.1,
+  },
+  'people-family': {
+    title: 'Talking about yourself and family',
+    where: 'Sprechen Teil 1 and Schreiben Teil 1 (forms).',
+    action: 'Prepare and record your self-introduction: Name, Alter, Land, Wohnort, Sprachen, Beruf, Hobby. Then fill in one sample form.',
+    minutes: 15, impact: 1.2,
+  },
+  'travel-transport': {
+    title: 'Travel and transport words',
+    where: 'Hören Teil 2 (station announcements) and Lesen Teil 3 (signs).',
+    action: 'Learn the 20 core station words (Gleis, Abfahrt, Ankunft, Verspätung, umsteigen …). Listen to 3 real announcements and note platform + time.',
+    minutes: 15, impact: 1.1,
+  },
+  'food-shopping': {
+    title: 'Shopping, food and prices',
+    where: 'Sprechen Teil 3 (requests) and Lesen Teil 2 (small ads).',
+    action: 'Role-play buying 5 things: „Ich hätte gern …“, „Was kostet …?“, „Die Rechnung, bitte.“ Learn opposites in pairs (teuer – billig).',
+    minutes: 15, impact: 1.0,
+  },
+  'work-health': {
+    title: 'Work, health and appointments',
+    where: 'Hören Teil 3 (phone messages) and Schreiben Teil 2 (messages).',
+    action: 'Write two 30-word messages: cancel an appointment because you are sick, and ask for a new Termin. Learn täglich / wöchentlich / Termin / Praxis.',
+    minutes: 15, impact: 1.1,
+  },
+  'everyday-phrases': {
+    title: 'Everyday reactions and polite phrases',
+    where: 'Sprechen Teil 2–3 – reacting quickly is part of the score.',
+    action: 'Drill 15 reaction pairs out loud (Danke → Bitte; Entschuldigung → Kein Problem). Aim to answer in under 2 seconds.',
+    minutes: 10, impact: 1.0,
+  },
+  // grammar
+  'verb-forms': {
+    title: 'Verb endings (ich, du, er/sie, wir, Sie) and sein/haben',
+    where: 'Schreiben Teil 2 and all of Sprechen – wrong endings cost points every sentence.',
+    action: 'Conjugate 5 verbs a day (kommen, wohnen, arbeiten, sein, haben) for all persons, then write one sentence per person.',
+    minutes: 15, impact: 1.3,
+  },
+  'word-order': {
+    title: 'Word order: verb in position 2, separable verbs',
+    where: 'Schreiben Teil 2 and Sprechen – examiners notice it immediately.',
+    action: 'Take 5 sentences and start each with a time word (Heute, Morgen, Am Montag) – move the verb to position 2. Do 5 with separable verbs (anrufen, ankommen, einkaufen).',
+    minutes: 15, impact: 1.3,
+  },
+  'modal-verbs': {
+    title: 'Modal verbs (können, möchten, müssen)',
+    where: 'Sprechen Teil 3 (requests) and Schreiben Teil 2.',
+    action: 'Write 6 requests and 6 excuses with a modal verb – modal in position 2, infinitive at the end („Ich kann morgen leider nicht kommen.“).',
+    minutes: 15, impact: 1.2,
+  },
+  'articles-cases': {
+    title: 'Articles: der/die/das and einen (accusative)',
+    where: 'Schreiben and Sprechen – especially when asking for things.',
+    action: 'Learn every new noun WITH its article. Practise „Ich kaufe/brauche/habe einen/eine/ein …“ with 10 everyday nouns.',
+    minutes: 15, impact: 1.2,
+  },
+  negation: {
+    title: 'Negation: nicht vs. kein',
+    where: 'Sprechen Teil 2 and Schreiben.',
+    action: 'Rule: kein for nouns with ein/no article, nicht for everything else. Answer 10 yes/no questions in the negative out loud.',
+    minutes: 10, impact: 1.0,
+  },
+  possessives: {
+    title: 'Possessives (mein, dein, sein, ihr)',
+    where: 'Sprechen Teil 1–2 – talking about family.',
+    action: 'Describe 5 family photos: „Das ist meine Schwester. Ihr Mann heißt … Sein Auto ist …“',
+    minutes: 10, impact: 0.9,
+  },
+  prepositions: {
+    title: 'Time and place prepositions (am, um, im, mit)',
+    where: 'Hören and Schreiben – times and appointments.',
+    action: 'Make a mini-table: am + day, um + clock time, im + month, mit + dem/der. Write 8 sentences about your week.',
+    minutes: 10, impact: 1.0,
+  },
+  'w-questions': {
+    title: 'W-questions (Wie, Wo, Woher, Wann, Was)',
+    where: 'Sprechen Teil 2 – you have to ASK questions too.',
+    action: 'For each of 6 topics, write two W-questions and ask them out loud to a partner or recorder.',
+    minutes: 10, impact: 1.1,
+  },
+  // reading
+  'signs-notices': {
+    title: 'Reading signs and notices for the key detail',
+    where: 'Lesen Teil 3 and Hören Teil 2.',
+    action: 'Read the question FIRST, then scan the sign for that one detail (day, time, floor, allowed/not allowed). Do one Lesen Teil 3 from a Modellsatz.',
+    minutes: 15, impact: 1.1,
+  },
+  'messages-emails': {
+    title: 'Short messages and e-mails',
+    where: 'Lesen Teil 1 – watch for changed plans („nicht … sondern“).',
+    action: 'Read 3 short e-mails and underline who / what / when. Watch for traps: the old date vs. the new date, what is already done.',
+    minutes: 15, impact: 1.1,
+  },
+  'ads-info': {
+    title: 'Ads, timetables and opening hours',
+    where: 'Lesen Teil 2 – matching a situation to the right ad.',
+    action: 'For each ad, write the one condition that matters (weekend? non-smoker? morning only?). Then do one Lesen Teil 2 from a Modellsatz.',
+    minutes: 15, impact: 1.1,
+  },
+};
+
+const SELF_FALLBACK = {
+  selfSpeaking: {
+    title: 'Speaking out loud – the part this check cannot hear',
+    where: 'Sprechen Teil 1–3 (25% of the exam).',
+    action: 'Record your self-introduction and 6 question–answer pairs on your phone. Listen back once a day and fix one thing.',
+    minutes: 15,
+  },
+  selfWriting: {
+    title: 'Writing a 30-word message',
+    where: 'Schreiben Teil 2 – three content points, about 30 words.',
+    action: 'Write one 30-word message a day covering all three bullet points. Check: verb in position 2, greeting and closing.',
+    minutes: 15,
+  },
+  selfListening: {
+    title: 'Listening to announcements and phone messages',
+    where: 'Hören Teil 1–3 (25% of the exam).',
+    action: 'Play one official Hören practice track daily. Note only times, numbers and places – then check the transcript.',
+    minutes: 15,
+  },
+};
+
+function recommend(form, responses, self = {}, max = 3) {
+  const byId = Object.fromEntries(responses.map((r) => [r.itemId, r]));
+  const weight = {};
+  const evidence = {};
+  for (const item of form) {
+    const r = byId[item.id];
+    const correct = r && !r.idk && r.choice === item.answer;
+    if (correct) continue;
+    const w = (4 - item.level) * (TAGS[item.tag]?.impact ?? 1);
+    weight[item.tag] = (weight[item.tag] ?? 0) + w;
+    (evidence[item.tag] ??= []).push(item.id);
+  }
+
+  const picks = Object.entries(weight)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, max)
+    .map(([tag]) => ({ tag, ...TAGS[tag], evidence: evidence[tag] }));
+
+  if (picks.length < 2) {
+    const productive = ['selfSpeaking', 'selfWriting', 'selfListening']
+      .sort((a, b) => (self[a] ?? 0) - (self[b] ?? 0));
+    for (const key of productive) {
+      if (picks.length >= Math.min(2, max)) break;
+      picks.push({ tag: key, ...SELF_FALLBACK[key], evidence: [] });
+    }
+  }
+  return picks;
+}
+
+// ═════════════════════════════════════════════════════════════
+// TRAINER BATCH BOARD (share codes + batch analysis)
+// ═════════════════════════════════════════════════════════════
+// Trainer Batch Board – share codes and batch analysis.
+//
+// No backend: the learner's result travels as a short, checksummed code inside
+// a WhatsApp message. The trainer pastes the messages into the Batch Board and
+// everything is computed in the browser. Codes hold only name, batch and results.
+
+const TAG_ORDER = [
+  'numbers-time', 'days-dates', 'people-family', 'travel-transport', 'food-shopping',
+  'work-health', 'everyday-phrases', 'verb-forms', 'word-order', 'modal-verbs',
+  'articles-cases', 'negation', 'possessives', 'prepositions', 'w-questions',
+  'signs-notices', 'messages-emails', 'ads-info',
+];
+const EXAM_CODE = { goethe: 'g', osd: 'o', unsure: 'u' };
+const EXAM_KEY = { g: 'goethe', o: 'osd', u: 'unsure' };
+const VERDICT_CODE = { ready: 'r', almost: 'a', notyet: 'n' };
+const VERDICT_KEY = { r: 'ready', a: 'almost', n: 'notyet' };
+const PREFIX = 'EXR1';
+
+// ───────── encoding ─────────
+function b64urlEncode(str) {
+  const bytes = new TextEncoder().encode(str);
+  let bin = '';
+  bytes.forEach((b) => { bin += String.fromCharCode(b); });
+  return btoa(bin).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+function b64urlDecode(s) {
+  const pad = s.replace(/-/g, '+').replace(/_/g, '/') + '==='.slice((s.length + 3) % 4);
+  const bin = atob(pad);
+  return new TextDecoder().decode(Uint8Array.from(bin, (c) => c.charCodeAt(0)));
+}
+function checksum(s) {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) % 1296;
+  return h.toString(36).padStart(2, '0');
+}
+
+/**
+ * Build a share code from a finished attempt.
+ * form: the items shown; responses: [{itemId, choice, idk}]; result: scoreAttempt() output.
+ */
+function encodeResult({ name = '', batch = '', exam = 'unsure', examDate = '', form, responses, self = {}, result, ts = new Date() }) {
+  const byId = Object.fromEntries(responses.map((r) => [r.itemId, r]));
+  const tags = {};
+  for (const it of form) {
+    const r = byId[it.id];
+    const ok = r && !r.idk && r.choice === it.answer;
+    const idx = TAG_ORDER.indexOf(it.tag);
+    const t = (tags[idx] ??= [idx, 0, 0]);
+    t[1] += 1; if (!ok) t[2] += 1;
+  }
+  const payload = {
+    n: String(name).trim().slice(0, 40),
+    b: String(batch).trim().slice(0, 30),
+    e: EXAM_CODE[exam] ?? 'u',
+    d: examDate || '',
+    t: (ts instanceof Date ? ts : new Date(ts)).toISOString().slice(0, 10),
+    v: VERDICT_CODE[result.verdict.level],
+    p: result.predicted,
+    r: result.range,
+    s: ['vocab', 'grammar', 'reading'].map((k) => result.skills[k]?.correct ?? 0),
+    q: ['vocab', 'grammar', 'reading'].map((k) => result.skills[k]?.total ?? 0),
+    f: [self.selfListening ?? 0, self.selfWriting ?? 0, self.selfSpeaking ?? 0],
+    k: result.idkCount ?? 0,
+    m: Object.values(tags),
+  };
+  const body = b64urlEncode(JSON.stringify(payload));
+  return `${PREFIX}.${body}.${checksum(body)}`;
+}
+
+/** Decode one code. Returns null if it is damaged or not ours. */
+function decodeResult(code) {
+  const m = /^EXR1\.([A-Za-z0-9_-]+)\.([0-9a-z]{2})$/.exec(String(code).trim());
+  if (!m || checksum(m[1]) !== m[2]) return null;
+  try {
+    const p = JSON.parse(b64urlDecode(m[1]));
+    if (!Array.isArray(p.s) || !VERDICT_KEY[p.v]) return null;
+    return {
+      name: p.n || 'Unnamed learner',
+      batch: p.b || '',
+      exam: EXAM_KEY[p.e] ?? 'unsure',
+      examDate: p.d || '',
+      date: p.t,
+      verdict: VERDICT_KEY[p.v],
+      predicted: p.p,
+      range: p.r,
+      skills: { vocab: [p.s[0], p.q[0]], grammar: [p.s[1], p.q[1]], reading: [p.s[2], p.q[2]] },
+      self: { selfListening: p.f[0], selfWriting: p.f[1], selfSpeaking: p.f[2] },
+      idk: p.k,
+      tags: (p.m || []).map(([i, seen, missed]) => ({ tag: TAG_ORDER[i], seen, missed })).filter((t) => t.tag),
+    };
+  } catch { return null; }
+}
+
+/**
+ * Pull every code out of pasted text (whole WhatsApp chats are fine).
+ * Keeps the most recent result per learner name + batch.
+ */
+function parseBatch(text) {
+  const found = String(text).match(/EXR1\.[A-Za-z0-9_-]+\.[0-9a-z]{2}/g) ?? [];
+  const latest = new Map();
+  let invalid = 0;
+  for (const code of found) {
+    const r = decodeResult(code);
+    if (!r) { invalid += 1; continue; }
+    const key = `${r.name.toLowerCase()}|${r.batch.toLowerCase()}`;
+    const prev = latest.get(key);
+    if (!prev || r.date >= prev.date) latest.set(key, r);
+  }
+  // Text that looks like a code but is broken (e.g. cut off while copying)
+  const looksLike = (String(text).match(/EXR1\.[^\s]*/g) ?? []).length;
+  invalid += Math.max(0, looksLike - found.length);
+  return { learners: [...latest.values()], invalid, totalCodes: found.length };
+}
+
+// ───────── analysis ─────────
+
+function daysUntil(date, now = new Date()) {
+  if (!date) return null;
+  const a = new Date(`${date}T00:00:00`);
+  const b = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  return Math.round((a - b) / 86400000);
+}
+
+/**
+ * Who needs attention, in order. Lower priority number = act first.
+ * Ready learners are listed last as "clear to book".
+ */
+function triage(learners, now = new Date()) {
+  return learners.map((l) => {
+    const days = daysUntil(l.examDate, now);
+    const booked = days != null && days >= 0;
+    let priority; let action;
+    if (l.verdict === 'notyet' && booked && days <= 21) {
+      priority = 1; action = 'Call today. Exam fees are usually non-refundable – check now whether their centre allows moving to a later date. If not, daily 1:1 practice on their top gap.';
+    } else if (l.verdict === 'almost' && booked && days <= 14) {
+      priority = 2; action = 'Book a 1:1 this week on their top gap, then retest in 7 days.';
+    } else if (l.verdict === 'notyet' && booked) {
+      priority = 3; action = 'Weekly retest; agree a daily practice plan on their top gap.';
+    } else if (l.verdict === 'almost' && booked) {
+      priority = 4; action = 'Retest in 1–2 weeks; focus homework on their top gap.';
+    } else if (l.verdict !== 'ready') {
+      priority = 5; action = 'Not booked – advise them not to book until they test "Ready" twice.';
+    } else {
+      priority = 6; action = booked ? 'On track – one timed Modellsatz before the exam.' : 'Clear to book – suggest a date 2–4 weeks out.';
+    }
+    if (days != null && days < 0) { priority = 7; action = 'Exam date passed – ask for their result to improve the check.'; }
+    const topGap = [...l.tags].filter((t) => t.missed > 0).sort((a, b) => b.missed / b.seen - a.missed / a.seen || b.missed - a.missed)[0]?.tag ?? null;
+    return { ...l, days, priority, action, topGap };
+  }).sort((a, b) => a.priority - b.priority || (a.days ?? 999) - (b.days ?? 999) || a.predicted - b.predicted);
+}
+
+/**
+ * Batch-level micro-skill gaps. Because every learner gets a different set of
+ * questions, the miss rate is computed per question actually shown
+ * (missed ÷ seen), not per learner – otherwise tags that happened to appear
+ * more often would look weaker than they are.
+ */
+function batchGaps(learners, { minSeen = 3 } = {}) {
+  const agg = {};
+  for (const l of learners) {
+    for (const t of l.tags) {
+      const a = (agg[t.tag] ??= { tag: t.tag, seen: 0, missed: 0, learnersMissing: 0, learnersSeen: 0 });
+      a.seen += t.seen; a.missed += t.missed; a.learnersSeen += 1;
+      if (t.missed > 0) a.learnersMissing += 1;
+    }
+  }
+  return Object.values(agg)
+    .filter((a) => a.seen >= minSeen)
+    .map((a) => ({ ...a, rate: a.missed / a.seen }))
+    .sort((a, b) => b.rate - a.rate || b.missed - a.missed);
+}
+
+function batchCSV(rows) {
+  const head = ['name', 'batch', 'exam', 'exam_date', 'days_left', 'verdict', 'predicted', 'range_low', 'range_high', 'vocab', 'grammar', 'reading', 'self_listening', 'self_writing', 'self_speaking', 'top_gap', 'action', 'checked_on'];
+  const lines = rows.map((r) => [r.name, r.batch, r.exam, r.examDate, r.days ?? '', r.verdict, r.predicted, r.range[0], r.range[1],
+    `${r.skills.vocab[0]}/${r.skills.vocab[1]}`, `${r.skills.grammar[0]}/${r.skills.grammar[1]}`, `${r.skills.reading[0]}/${r.skills.reading[1]}`,
+    r.self.selfListening, r.self.selfWriting, r.self.selfSpeaking, r.topGap ?? '', r.action, r.date]);
+  return [head, ...lines].map((r) => r.map((v) => `"${String(v).replace(/"/g, '""')}"`).join(',')).join('\n');
+}
+
+// ═════════════════════════════════════════════════════════════
+// STORAGE + TRACKING
+// ═════════════════════════════════════════════════════════════
+// Local persistence + event tracking.
+//
+// v1 has no backend on purpose: zero cost, no login, nothing to break before
+// the first five learners try it. Everything is stored in localStorage and can
+// be exported as JSON/CSV from the Insights view. To send events to a real
+// backend (Supabase, PostHog, a Google Sheet webhook), set
+//   window.ANALYTICS_ENDPOINT = 'https://…'
+// in index.html – track() will POST each event with navigator.sendBeacon.
+
+const KEY = 'examready.v1';
+
+function load() {
+  try { return JSON.parse(localStorage.getItem(KEY)) ?? fresh(); } catch { return fresh(); }
+}
+function fresh() { return { attempts: [], events: [], outcomes: [] }; }
+function save(db) {
+  try { localStorage.setItem(KEY, JSON.stringify(db)); } catch { /* private mode / quota – the app still works */ }
+}
+
+function track(name, props = {}) {
+  const evt = { name, ts: new Date().toISOString(), ...props };
+  const db = load();
+  db.events.push(evt);
+  if (db.events.length > 2000) db.events = db.events.slice(-2000);
+  save(db);
+  const url = typeof window !== 'undefined' && window.ANALYTICS_ENDPOINT;
+  if (url && navigator.sendBeacon) {
+    try { navigator.sendBeacon(url, JSON.stringify(evt)); } catch { /* never block the learner */ }
+  }
+}
+
+function saveAttempt(attempt) {
+  const db = load();
+  db.attempts.push(attempt);
+  save(db);
+}
+
+function saveOutcome(outcome) {
+  const db = load();
+  db.outcomes = db.outcomes.filter((o) => o.attemptId !== outcome.attemptId);
+  db.outcomes.push(outcome);
+  save(db);
+}
+
+function recentItemIds(lastN = 2) {
+  return load().attempts.slice(-lastN).flatMap((a) => a.itemIds);
+}
+
+function getAll() { return load(); }
+
+function clearAll() { save(fresh()); }
+
+function toCSV(db = load()) {
+  const rows = [['attempt_id', 'ts', 'exam', 'exam_date', 'item_id', 'skill', 'level', 'tag', 'correct', 'idk', 'ms', 'predicted', 'verdict', 'outcome_passed', 'outcome_score']];
+  const outcome = Object.fromEntries(db.outcomes.map((o) => [o.attemptId, o]));
+  for (const a of db.attempts) {
+    for (const r of a.responses) {
+      rows.push([a.id, a.ts, a.exam, a.examDate ?? '', r.itemId, r.skill, r.level, r.tag, r.correct ? 1 : 0, r.idk ? 1 : 0, r.ms,
+        a.result.predicted, a.result.verdict, outcome[a.id]?.passed ?? '', outcome[a.id]?.score ?? '']);
+    }
+  }
+  return rows.map((r) => r.map((v) => `"${String(v).replace(/"/g, '""')}"`).join(',')).join('\n');
+}
+
+const store = { track, saveAttempt, saveOutcome, recentItemIds, getAll, clearAll, toCSV };
+
+// ═════════════════════════════════════════════════════════════
+// APP (screens, flow, insights, batch board)
+// ═════════════════════════════════════════════════════════════
+
+const app = document.getElementById('app');
+
+const state = {
+  screen: 'welcome',
+  exam: 'goethe',
+  examDate: '',
+  noDate: false,
+  form: [],
+  idx: 0,
+  answers: {},      // itemId -> { choice, idk, ms }
+  self: {},
+  qStart: 0,
+  attemptId: null,
+  result: null,
+  recs: [],
+  responses: [],
+  learnerName: remember('name'),
+  learnerBatch: remember('batch'),
+  batchText: remember('batchText'),
+  batchFilter: 'all',
+};
+
+// Remember small conveniences (name, batch, pasted batch) in this browser only.
+function remember(key, value) {
+  try {
+    if (value === undefined) return localStorage.getItem('examready.' + key) ?? '';
+    localStorage.setItem('examready.' + key, value);
+  } catch { /* storage unavailable */ }
+  return value ?? '';
+}
+
+// ───────────────────────── helpers ─────────────────────────
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const pct = (x) => Math.round(x * 100);
+const VERDICT = {
+  ready:  { tag: 'Ready', title: 'You look ready to book your exam.' },
+  almost: { tag: 'Almost there', title: 'Close – but not safe to book yet.' },
+  notyet: { tag: 'Not yet', title: 'Practise a bit more before you book.' },
+};
+const KIND_LABEL = { sign: 'Sign / notice', sms: 'Text message', email: 'E-mail', ad: 'Small ad', ads: 'Two ads' };
+
+function go(screen) { state.screen = screen; render(); window.scrollTo({ top: 0 }); }
+function toast(msg) {
+  const t = document.createElement('div'); t.className = 'toast'; t.textContent = msg;
+  document.body.appendChild(t); setTimeout(() => t.remove(), 2200);
+}
+
+// ───────────────────────── flow ─────────────────────────
+function start() {
+  const seed = Math.floor(Math.random() * 2 ** 31);
+  state.form = buildForm(ITEMS, { seed, recentlySeen: store.recentItemIds() });
+  state.idx = 0;
+  state.answers = {};
+  state.self = {};
+  state.attemptId = `a_${Date.now().toString(36)}_${seed.toString(36)}`;
+  state.seed = seed;
+  state.startedAt = Date.now();
+  store.track('check_started', { attemptId: state.attemptId, exam: state.exam, hasDate: !!state.examDate });
+  go('question');
+}
+
+function stopClock() {
+  const item = state.form[state.idx];
+  if (!item || !state.qStart) return;
+  const a = (state.answers[item.id] ??= { choice: null, idk: false, ms: 0 });
+  a.ms += Date.now() - state.qStart;
+  state.qStart = 0;
+}
+
+function next() {
+  stopClock();
+  if (state.idx < state.form.length - 1) { state.idx += 1; go('question'); }
+  else go('self');
+}
+function back() {
+  stopClock();
+  if (state.idx > 0) { state.idx -= 1; go('question'); }
+}
+
+function finish() {
+  const responses = state.form.map((it) => {
+    const a = state.answers[it.id] ?? { choice: null, idk: true, ms: 0 };
+    return { itemId: it.id, choice: a.choice, idk: a.idk, ms: a.ms };
+  });
+  state.responses = responses;
+  state.result = scoreAttempt(state.form, responses, state.self, state.exam);
+  state.recs = recommend(state.form, responses, state.self);
+  const attempt = {
+    id: state.attemptId, ts: new Date().toISOString(), seed: state.seed,
+    exam: state.exam, examDate: state.examDate || null,
+    itemIds: state.form.map((i) => i.id),
+    responses: state.form.map((it, i) => ({
+      ...responses[i], skill: it.skill, level: it.level, tag: it.tag,
+      correct: !responses[i].idk && responses[i].choice === it.answer,
+    })),
+    self: state.self,
+    durationMs: Date.now() - state.startedAt,
+    result: { predicted: state.result.predicted, range: state.result.range, verdict: state.result.verdict.level, recs: state.recs.map((r) => r.tag) },
+  };
+  store.saveAttempt(attempt);
+  store.track('check_completed', { attemptId: attempt.id, verdict: attempt.result.verdict, predicted: attempt.result.predicted, durationMs: attempt.durationMs });
+  go('result');
+}
+
+// ───────────────────────── screens ─────────────────────────
+function render() {
+  const screens = { welcome, question, self, result, insights, batch };
+  app.innerHTML = (screens[state.screen] ?? welcome)();
+  document.body.classList.toggle('focus', state.screen === 'question' || state.screen === 'self');
+  if (state.screen === 'question') state.qStart = Date.now();
+  const first = app.querySelector('h1, .prompt');
+  if (first) first.setAttribute('tabindex', '-1');
+}
+
+function welcome() {
+  const exams = [
+    ['goethe', 'Goethe-Zertifikat A1', 'Start Deutsch 1'],
+    ['osd', 'ÖSD Zertifikat A1', 'Austrian Language Diploma'],
+    ['unsure', 'Not decided yet', 'We use the common 60% pass mark'],
+  ];
+  return `
+  <section class="hero">
+    <span class="eyebrow">Goethe · ÖSD · CEFR A1</span>
+    <h1>Are you ready to book your A1 German exam?</h1>
+    <p class="lead">A short check that estimates your exam score, shows where you stand in each skill, and tells you what to practise first.</p>
+    <ul class="meta">
+      <li>15 questions</li><li>About 8 minutes</li><li>No sign-up</li>
+    </ul>
+  </section>
+
+  <div class="card form">
+    <div class="field-label">Which exam are you taking?</div>
+    <div class="rcards" role="group">
+      ${exams.map(([k, t, s]) => `
+        <button class="rcard" data-action="exam" data-value="${k}" aria-pressed="${state.exam === k}">
+          <span class="radio" aria-hidden="true"></span>
+          <span><b>${t}</b><small>${s}</small></span>
+        </button>`).join('')}
+    </div>
+
+    <div class="field-label" style="margin-top:20px"><label for="date">Exam date</label> <span class="opt">optional</span></div>
+    <div class="date-row">
+      <input id="date" type="date" value="${esc(state.examDate)}" ${state.noDate ? 'disabled' : ''} />
+      <button class="chip" data-action="nodate" aria-pressed="${state.noDate}">Not booked yet</button>
+    </div>
+
+    <button class="btn block lg" data-action="start" style="margin-top:22px">Start the check</button>
+  </div>
+
+  <ol class="steps">
+    <li><b>Answer 15 questions</b><span>Vocabulary, grammar and reading, in exam style</span></li>
+    <li><b>Rate 3 skills</b><span>Listening, writing and speaking</span></li>
+    <li><b>Get your plan</b><span>Score estimate, skill breakdown, what to practise</span></li>
+  </ol>
+  <p class="hint">Tap <b>“I don't know yet”</b> instead of guessing. Guesses make you look more ready than you are.</p>`;
+}
+
+function question() {
+  const item = state.form[state.idx];
+  const a = state.answers[item.id] ?? {};
+  const total = state.form.length;
+  const keyLabels = ['A', 'B', 'C', 'D'];
+  const answered = a.choice != null || a.idk;
+  return `
+  <section class="q">
+    <div class="q-head">
+      <span class="section-chip">${SKILLS[item.skill].de} <span>· ${SKILLS[item.skill].label}</span></span>
+      <span class="count">${state.idx + 1} <span>/ ${total}</span></span>
+    </div>
+    <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="${total}" aria-valuenow="${state.idx}"><i style="width:${(state.idx / total) * 100}%"></i></div>
+    ${item.text ? `<div class="text-card ${item.text.kind}"><span class="kind">${KIND_LABEL[item.text.kind]}</span>${esc(item.text.body)}</div>` : ''}
+    <div class="prompt">${esc(item.prompt)}</div>
+    <div class="choices" role="group" aria-label="Answer options">
+      ${item.order.map((orig, i) => `
+        <button class="option" data-action="choose" data-choice="${orig}" aria-pressed="${!a.idk && a.choice === orig}">
+          <span class="key">${keyLabels[i]}</span><span>${esc(item.options[orig])}</span>
+        </button>`).join('')}
+    </div>
+    <button class="idk" data-action="idk" aria-pressed="${!!a.idk}">I don't know yet</button>
+  </section>
+  <div class="bottombar">
+    <div class="bottombar-inner">
+      <button class="btn ghost" data-action="back" ${state.idx === 0 ? 'disabled' : ''}>Back</button>
+      <button class="btn" data-action="next" ${answered ? '' : 'disabled'}>${state.idx === total - 1 ? 'Continue' : 'Next'}</button>
+    </div>
+  </div>`;
+}
+
+function self() {
+  const done = CAN_DO.every((c) => state.self[c.id] != null);
+  return `
+  <section>
+    <span class="eyebrow">Last step · 30 seconds</span>
+    <h1>How confident are you with these?</h1>
+    <p class="lead">A tap test can't hear you speak or read your writing, so we ask. These count for at most 30% of each estimate.</p>
+    <div class="card" style="margin-top:18px">
+      ${CAN_DO.map((c) => `
+        <div class="cando">
+          <div class="lbl">${esc(c.label)}</div>
+          <p>${esc(c.statement)}</p>
+          <div class="seg" role="group">
+            ${CAN_DO_SCALE.map((s, v) => `<button data-action="self" data-id="${c.id}" data-value="${v}" aria-pressed="${state.self[c.id] === v}">${s}</button>`).join('')}
+          </div>
+        </div>`).join('')}
+    </div>
+  </section>
+  <div class="bottombar">
+    <div class="bottombar-inner">
+      <button class="btn ghost" data-action="backToQuestions">Back</button>
+      <button class="btn" data-action="finish" ${done ? '' : 'disabled'}>See my result</button>
+    </div>
+  </div>`;
+}
+
+function result() {
+  const r = state.result;
+  const v = VERDICT[r.verdict.level];
+  const [lo, hi] = r.range;
+  const measured = Object.entries(r.skills);
+  const parts = ['hoeren', 'lesen', 'schreiben', 'sprechen'];
+  const examShort = { goethe: 'Goethe A1', osd: 'ÖSD A1', unsure: 'A1 exam' }[state.exam];
+  const reviewed = state.form.map((it) => {
+    const a = state.answers[it.id] ?? {};
+    const ok = !a.idk && a.choice === it.answer;
+    const yours = a.idk ? "I don't know yet" : (a.choice != null ? it.options[a.choice] : '—');
+    return `<div class="review-item">
+      <div class="small muted">${SKILLS[it.skill].label} · level ${it.level}</div>
+      ${it.text ? `<div class="small quote">${esc(it.text.body)}</div>` : ''}
+      <div><b>${esc(it.prompt)}</b></div>
+      <div class="small">Your answer: <span class="${ok ? 'ok' : 'bad'}">${esc(yours)}</span>${ok ? ' ✓' : ` · Correct: <b>${esc(it.options[it.answer])}</b>`}</div>
+      <div class="small muted">${esc(it.explain)}</div>
+    </div>`;
+  }).join('');
+
+  return `
+  <section class="verdict ${r.verdict.level}">
+    <div class="v-top">
+      <span class="tag"><i></i>${v.tag}</span>
+      <span class="v-exam">${examShort}</span>
+    </div>
+    <h1>${v.title}</h1>
+    <p class="v-advice">${esc(dateAdvice(r.verdict.level, state.examDate))}</p>
+    <div class="scorebox">
+      <div class="score"><b>${r.predicted}</b><span>/ 100<br/>estimated</span></div>
+      <div class="score-note">Likely between <b>${lo}</b> and <b>${hi}</b><br/>Pass mark is <b>${CONFIG.passMark}</b></div>
+    </div>
+    <div class="meter" aria-label="Estimated score ${r.predicted} out of 100, likely between ${lo} and ${hi}. Pass mark 60.">
+      <div class="track"></div>
+      <div class="range" style="left:${lo}%;width:${Math.max(hi - lo, 1)}%"></div>
+      <div class="pass" style="left:${CONFIG.passMark}%"></div>
+      <div class="dot" style="left:${r.predicted}%"></div>
+    </div>
+    <div class="scale"><span>0</span><span>Pass 60</span><span>100</span></div>
+    <ul class="reasons">${r.verdict.reasons.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>
+  </section>
+
+  <h2>What to practise first</h2>
+  <div class="stack">
+    ${state.recs.map((rec, i) => `
+      <div class="card rec">
+        <div class="num">${i + 1}</div>
+        <div>
+          <h3>${esc(rec.title)}</h3>
+          <p class="small">${esc(rec.action)}</p>
+          <div class="rec-foot"><span class="mins">~${rec.minutes} min a day</span><span class="where">${esc(rec.where)}</span></div>
+        </div>
+      </div>`).join('')}
+  </div>
+
+  <h2>Your skills</h2>
+  <div class="card">
+    <div class="legend">Measured by your answers</div>
+    ${measured.map(([k, s]) => `
+      <div class="skill"><span>${SKILLS[k].label}</span>
+        <div class="sbar"><i class="${s.share < CONFIG.minSkillForReady ? 'low' : ''}" style="width:${pct(s.share)}%"></i></div>
+        <b>${s.correct}/${s.total}</b></div>`).join('')}
+    <div class="legend" style="margin-top:18px">Estimated for each exam part <span class="muted">· striped = partly self-rated</span></div>
+    ${parts.map((p) => `
+      <div class="skill"><span>${PART_LABELS[p]}</span>
+        <div class="sbar"><i class="${p === 'lesen' ? '' : 'est'}" style="width:${pct(r.parts[p])}%"></i></div>
+        <b>${pct(r.parts[p])}%</b></div>`).join('')}
+  </div>
+
+  <h2>Share with your trainer</h2>
+  <div class="card">
+    <p class="small muted" style="margin-top:0">Your trainer sees your batch's results in one place and can help you before the exam. Only your name, batch and these results are shared.</p>
+    <div class="two">
+      <div><label class="field" for="lname">Your name</label>
+        <input id="lname" class="text" type="text" maxlength="40" placeholder="e.g. Priya Nair" value="${esc(state.learnerName)}" /></div>
+      <div><label class="field" for="lbatch">Batch <span class="opt">optional</span></label>
+        <input id="lbatch" class="text" type="text" maxlength="30" placeholder="e.g. A1 Weekend" value="${esc(state.learnerBatch)}" /></div>
+    </div>
+    <div class="actions">
+      <a class="btn wa" id="wa" href="${waLink()}" target="_blank" rel="noopener" data-action="sent">Send on WhatsApp</a>
+      <button class="btn secondary" data-action="copy">Copy message</button>
+    </div>
+  </div>
+
+  <h2>More about this result</h2>
+  <div class="accordion">
+    <details>
+      <summary>Review your answers <span class="muted">${r.correct}/${r.total} correct</span></summary>
+      ${reviewed}
+    </details>
+    <details>
+      <summary>How “ready” is calculated</summary>
+      <p class="small">1. Your answers give a score for vocabulary, grammar and reading (5 questions each, with the same difficulty mix every time).</p>
+      <p class="small">2. We estimate each of the 4 exam parts (25 points each) from those scores, plus your self-rating for listening, writing and speaking (never more than 30%).</p>
+      <p class="small">3. Fifteen questions can't be exact, so we show a likely range. We only say <b>Ready</b> when even the low end clears the 60-point pass mark <i>and</i> you got at least 3 of 5 in every skill${state.exam === 'osd' ? ' <i>and</i> every exam part looks above 60% (ÖSD scores modules separately)' : ''}.</p>
+      <p class="small">Why so strict? Being told “ready” when you're not costs an exam fee and weeks. Being told “almost” when you're ready costs one more week of practice.</p>
+    </details>
+    <details>
+      <summary>What this check can't tell you</summary>
+      <p class="small">It doesn't hear your speaking, read your writing or play audio for listening. Those parts are estimated from your grammar, vocabulary and self-rating, so treat them as rough. Before the exam, do one full official model test (Goethe or ÖSD “Modellsatz”) under time, and ask your trainer to check one piece of your writing.</p>
+    </details>
+  </div>
+
+  <div class="actions center">
+    <button class="btn secondary" data-action="retake">Retake with new questions</button>
+  </div>`;
+}
+
+function insights() {
+  const db = store.getAll();
+  const atts = db.attempts;
+  const n = atts.length;
+  const byVerdict = { ready: 0, almost: 0, notyet: 0 };
+  atts.forEach((a) => { byVerdict[a.result.verdict] = (byVerdict[a.result.verdict] ?? 0) + 1; });
+
+  // Item analysis: difficulty (p-value), "don't know" rate, median time, and
+  // discrimination (does getting this item right go with a high total score?).
+  const stats = {};
+  for (const a of atts) {
+    const total = a.responses.filter((r) => r.correct).length;
+    for (const r of a.responses) {
+      const s = (stats[r.itemId] ??= { seen: 0, correct: 0, idk: 0, ms: [], pairs: [] });
+      s.seen += 1; if (r.correct) s.correct += 1; if (r.idk) s.idk += 1; s.ms.push(r.ms);
+      s.pairs.push([r.correct ? 1 : 0, total - (r.correct ? 1 : 0)]);
+    }
+  }
+  const rows = ITEMS.map((it) => {
+    const s = stats[it.id];
+    if (!s) return { it, seen: 0 };
+    const p = s.correct / s.seen;
+    const med = s.ms.sort((x, y) => x - y)[Math.floor(s.ms.length / 2)] / 1000;
+    return { it, seen: s.seen, p, idk: s.idk / s.seen, med, disc: pointBiserial(s.pairs) };
+  });
+
+  // Calibration: of the learners we called X, how many passed?
+  const outcomes = Object.fromEntries(db.outcomes.map((o) => [o.attemptId, o]));
+  const cal = { ready: [0, 0], almost: [0, 0], notyet: [0, 0] };
+  for (const a of atts) {
+    const o = outcomes[a.id]; if (!o) continue;
+    cal[a.result.verdict][0] += o.passed ? 1 : 0; cal[a.result.verdict][1] += 1;
+  }
+  const withOutcome = Object.values(cal).reduce((x, [, t]) => x + t, 0);
+  const synthetic = atts.some((a) => a.synthetic);
+
+  return `
+  <section>
+    <p class="muted small">Team view · data stays in this browser unless exported</p>
+    <h1>Insights</h1>
+    ${synthetic ? `<p class="small"><span class="flag">Synthetic demo data</span> These attempts were simulated to show how the analysis works. Clear them before real use.</p>` : ''}
+    <div class="kpis">
+      <div class="kpi"><b>${n}</b><span>checks completed</span></div>
+      <div class="kpi"><b>${n ? pct(byVerdict.ready / n) : 0}%</b><span>told "Ready"</span></div>
+      <div class="kpi"><b>${withOutcome}</b><span>with an exam outcome</span></div>
+      <div class="kpi"><b>${cal.ready[1] ? pct(cal.ready[0] / cal.ready[1]) + '%' : '—'}</b><span>of "Ready" who passed</span></div>
+    </div>
+
+    <h2>Is "Ready" right? (calibration – planned for v2)</h2>
+    <div class="card">
+      <table>
+        <tr><th>We said</th><th class="num">Exam results</th><th class="num">Passed</th><th class="num">Pass rate</th></tr>
+        ${['ready', 'almost', 'notyet'].map((k) => `<tr><td>${VERDICT[k].tag}</td><td class="num">${cal[k][1]}</td><td class="num">${cal[k][0]}</td><td class="num">${cal[k][1] ? pct(cal[k][0] / cal[k][1]) + '%' : '—'}</td></tr>`).join('')}
+      </table>
+      <p class="small muted">Needs real exam results, which v2 will collect (e.g. a WhatsApp follow-up after the exam date). Until then, use “Simulate” to see how it works. Target: ≥ 90% of "Ready" learners pass. If it's lower, raise the safety margin in <code>src/model.js</code>; if "Almost" learners pass at the same rate, we're too strict.</p>
+    </div>
+
+    <h2>Item analysis</h2>
+    <div class="card" style="overflow-x:auto">
+      <table>
+        <tr><th>Item</th><th>Skill · lvl</th><th class="num">Seen</th><th class="num">% right</th><th class="num">"Don't know"</th><th class="num">Discrim.</th><th class="num">Median s</th><th></th></tr>
+        ${rows.map((r) => `<tr>
+          <td>${r.it.id}</td><td>${r.it.skill} · ${r.it.level}</td><td class="num">${r.seen}</td>
+          <td class="num">${r.seen ? pct(r.p) + '%' : '—'}</td>
+          <td class="num">${r.seen ? pct(r.idk) + '%' : '—'}</td>
+          <td class="num">${r.seen && r.disc != null ? r.disc.toFixed(2) : '—'}</td>
+          <td class="num">${r.seen ? r.med.toFixed(1) : '—'}</td>
+          <td>${flags(r)}</td></tr>`).join('')}
+      </table>
+      <p class="small muted">Flags: <b>too easy</b> (&gt;95% right), <b>too hard</b> (&lt;25%), <b>weak</b> (discrimination &lt; 0.2 – strong learners don't do better on it, so rewrite it).</p>
+    </div>
+
+    <div class="actions">
+      <button class="btn secondary" data-action="exportJson">Export JSON</button>
+      <button class="btn secondary" data-action="exportCsv">Export CSV</button>
+      <button class="btn secondary" data-action="simulate">Simulate 300 learners (demo)</button>
+      <button class="btn ghost" data-action="clear">Clear data</button>
+    </div>
+    <p style="margin-top:20px"><a href="#" data-action="home">← Back to the check</a></p>
+  </section>`;
+}
+
+function flags(r) {
+  if (!r.seen || r.seen < 20) return '';
+  const f = [];
+  if (r.p > 0.95) f.push('too easy');
+  if (r.p < 0.25) f.push('too hard');
+  if (r.disc != null && r.disc < 0.2) f.push('weak');
+  return f.map((x) => `<span class="flag">${x}</span>`).join(' ');
+}
+
+// Point-biserial correlation between item score and rest-of-test score.
+function pointBiserial(pairs) {
+  const n = pairs.length; if (n < 5) return null;
+  const mx = pairs.reduce((a, [x]) => a + x, 0) / n;
+  const my = pairs.reduce((a, [, y]) => a + y, 0) / n;
+  let sxy = 0, sxx = 0, syy = 0;
+  for (const [x, y] of pairs) { sxy += (x - mx) * (y - my); sxx += (x - mx) ** 2; syy += (y - my) ** 2; }
+  return sxx && syy ? sxy / Math.sqrt(sxx * syy) : null;
+}
+
+// ───────────────────────── demo data ─────────────────────────
+// Simulates learners with a simple item-response model so the Insights view
+// can be demonstrated. Clearly flagged as synthetic.
+function simulate(count = 300) {
+  const rand = rng(42 + store.getAll().attempts.length);
+  const normal = () => { const u = rand() || 1e-9, v = rand(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); };
+  const diff = { 1: -1.3, 2: -0.2, 3: 0.9 };
+  for (let i = 0; i < count; i++) {
+    const theta = normal();
+    const form = buildForm(ITEMS, { seed: Math.floor(rand() * 1e9) });
+    const responses = form.map((it) => {
+      const c = 1 / it.options.length;
+      const p = c + (1 - c) / (1 + Math.exp(-1.4 * (theta - diff[it.level])));
+      const idk = p < 0.45 && rand() < 0.35;
+      const correct = !idk && rand() < p;
+      const wrong = it.options.map((_, k) => k).filter((k) => k !== it.answer);
+      return { itemId: it.id, idk, choice: idk ? null : (correct ? it.answer : wrong[Math.floor(rand() * wrong.length)]), ms: Math.round(5000 + rand() * 20000) };
+    });
+    const sr = () => Math.max(0, Math.min(3, Math.round(1.6 + theta * 0.8 + normal() * 0.7)));
+    const selfR = { selfListening: sr(), selfWriting: sr(), selfSpeaking: sr() };
+    const res = scoreAttempt(form, responses, selfR, 'goethe');
+    const id = `sim_${i}_${Math.floor(rand() * 1e9).toString(36)}`;
+    store.saveAttempt({
+      id, synthetic: true, ts: new Date().toISOString(), exam: 'goethe', examDate: null,
+      itemIds: form.map((f) => f.id),
+      responses: form.map((it, k) => ({ ...responses[k], skill: it.skill, level: it.level, tag: it.tag, correct: !responses[k].idk && responses[k].choice === it.answer })),
+      self: selfR, durationMs: 0,
+      result: { predicted: res.predicted, range: res.range, verdict: res.verdict.level, recs: [] },
+    });
+    if (rand() < 0.4) store.saveOutcome({ attemptId: id, passed: theta + normal() * 0.45 > -0.35, synthetic: true, reportedAt: new Date().toISOString() });
+  }
+}
+
+// ───────────────────────── trainer batch board ─────────────────────────
+function filteredBatch() {
+  const { learners } = parseBatch(state.batchText);
+  const rows = triage(learners);
+  return state.batchFilter === 'all' ? rows : rows.filter((r) => r.batch === state.batchFilter);
+}
+
+function batch() {
+  const parsed = parseBatch(state.batchText);
+  const batches = [...new Set(parsed.learners.map((l) => l.batch).filter(Boolean))];
+  const rows = filteredBatch();
+  const n = rows.length;
+  const count = (v) => rows.filter((r) => r.verdict === v).length;
+  const urgent = rows.filter((r) => r.priority <= 2);
+  const act = rows.filter((r) => r.priority <= 5);
+  const clear = rows.filter((r) => r.priority >= 6);
+  const gaps = batchGaps(rows).slice(0, 3);
+  const days = (r) => r.days == null ? 'Not booked' : r.days < 0 ? 'Date passed' : r.days === 0 ? 'Today' : `${r.examDate} · ${r.days} day${r.days === 1 ? '' : 's'}`;
+  const cell = ([c, t]) => `<td class="num cell ${c / t >= 0.8 ? 'c-hi' : c / t >= 0.6 ? 'c-mid' : 'c-lo'}">${c}/${t}</td>`;
+  const selfCell = (v) => `<td class="num">${['–', '◔', '◑', '●'][v] ?? '–'}</td>`;
+
+  return `
+  <section>
+    <p class="muted small">For trainers and counsellors · nothing leaves this browser</p>
+    <h1>Batch readiness board</h1>
+    <p class="muted">Learners tap "Send on WhatsApp" after their check. Paste their messages here – a whole chat export works – to see who needs help before their exam and what to teach the batch this week.</p>
+    <div class="card">
+      <label class="field" for="batchText" style="margin-top:0">Paste WhatsApp messages or trainer codes</label>
+      <textarea id="batchText" rows="5" placeholder="Paste here…">${esc(state.batchText)}</textarea>
+      <div class="actions">
+        <button class="btn" data-action="analyse">Analyse batch</button>
+        <button class="btn secondary" data-action="sampleBatch">Load sample batch</button>
+        ${state.batchText ? '<button class="btn ghost" data-action="clearBatch">Clear</button>' : ''}
+      </div>
+      ${parsed.invalid ? `<p class="small bad" style="margin-top:10px">${parsed.invalid} code${parsed.invalid > 1 ? 's' : ''} could not be read (probably cut off while copying). Ask the learner to resend.</p>` : ''}
+      ${state.batchText && /Sample:/.test(state.batchText) ? '<p class="small" style="margin-top:10px"><span class="flag">Sample data</span> Fictional learners for demonstration.</p>' : ''}
+    </div>
+
+    ${n === 0 ? (state.batchText ? '<p class="muted" style="margin-top:16px">No valid results found in the pasted text yet.</p>' : '') : `
+    ${batches.length > 1 ? `<div class="choice-row" style="margin-top:16px">
+      <button class="chip" data-action="batchFilter" data-value="all" aria-pressed="${state.batchFilter === 'all'}">All batches</button>
+      ${batches.map((b) => `<button class="chip" data-action="batchFilter" data-value="${esc(b)}" aria-pressed="${state.batchFilter === b}">${esc(b)}</button>`).join('')}
+    </div>` : ''}
+
+    <div class="kpis" style="margin-top:16px">
+      <div class="kpi"><b>${n}</b><span>learners</span></div>
+      <div class="kpi"><b class="ok">${count('ready')}</b><span>Ready</span></div>
+      <div class="kpi"><b style="color:var(--almost)">${count('almost')}</b><span>Almost</span></div>
+      <div class="kpi"><b class="bad">${count('notyet')}</b><span>Not yet</span></div>
+      <div class="kpi"><b>${urgent.length}</b><span>need help this week</span></div>
+    </div>
+
+    <h2>Act this week</h2>
+    ${act.length ? `<div class="stack">${act.map((r) => `
+      <div class="card learner p${r.priority}">
+        <div class="lhead">
+          <div><b>${esc(r.name)}</b>${r.batch ? ` <span class="muted small">· ${esc(r.batch)}</span>` : ''}</div>
+          <span class="pill ${r.verdict}">${VERDICT[r.verdict].tag}</span>
+        </div>
+        <div class="small muted">Exam: ${days(r)} · Estimated ${r.predicted}/100 (likely ${r.range[0]}–${r.range[1]})</div>
+        ${r.topGap ? `<div class="small" style="margin-top:6px">Top gap: <b>${esc(TAGS[r.topGap]?.title ?? r.topGap)}</b></div>` : ''}
+        <div class="small action">→ ${esc(r.action)}</div>
+      </div>`).join('')}</div>` : '<p class="muted">Nobody needs urgent help. 🎉</p>'}
+
+    ${clear.length ? `<details><summary>On track / clear to book (${clear.length})</summary>
+      ${clear.map((r) => `<div class="review-item"><b>${esc(r.name)}</b> <span class="muted small">· ${days(r)} · ${r.predicted}/100</span><div class="small">${esc(r.action)}</div></div>`).join('')}
+    </details>` : ''}
+
+    <h2>Teach this week</h2>
+    ${gaps.length ? `<div class="stack">${gaps.map((g, i) => `
+      <div class="card rec">
+        <div class="num">${i + 1}</div>
+        <div>
+          <h3>${esc(TAGS[g.tag]?.title ?? g.tag)}</h3>
+          <div class="where">Missed ${g.missed} of ${g.seen} questions shown (${pct(g.rate)}%) · ${g.learnersMissing} of ${g.learnersSeen} learners</div>
+          <p class="small"><b>In class:</b> ${esc(TAGS[g.tag]?.action ?? '')}</p>
+          <div class="small muted">Exam impact: ${esc(TAGS[g.tag]?.where ?? '')}</div>
+        </div>
+      </div>`).join('')}</div>
+      <p class="small muted">Miss rates are per question actually shown, because every learner gets a different set of questions. Areas shown fewer than 3 times in this batch are left out.</p>`
+      : '<p class="muted">Not enough answers yet to compare areas.</p>'}
+
+    <h2>Every learner</h2>
+    <div class="card" style="overflow-x:auto">
+      <table>
+        <tr><th>Learner</th><th class="num">Vocab</th><th class="num">Gram.</th><th class="num">Read.</th><th class="num" title="Self-rated listening">Hör</th><th class="num" title="Self-rated writing">Schr</th><th class="num" title="Self-rated speaking">Spr</th><th>Result</th></tr>
+        ${rows.map((r) => `<tr><td>${esc(r.name)}</td>${cell(r.skills.vocab)}${cell(r.skills.grammar)}${cell(r.skills.reading)}${selfCell(r.self.selfListening)}${selfCell(r.self.selfWriting)}${selfCell(r.self.selfSpeaking)}<td><span class="pill ${r.verdict}">${VERDICT[r.verdict].tag}</span></td></tr>`).join('')}
+      </table>
+      <p class="small muted">Self-ratings: – not yet · ◔ with help · ◑ mostly · ● easily</p>
+    </div>
+    <div class="actions"><button class="btn secondary" data-action="batchCsv">Export CSV</button></div>`}
+    <p style="margin-top:20px"><a href="#" data-action="home">← Back to the check</a></p>
+  </section>`;
+}
+
+// Fictional sample batch: 12 learners, simulated with the same item-response
+// model as the Insights demo, with exam dates relative to today.
+function sampleBatchText() {
+  const names = ['Anjali Menon', 'Rahul Patil', 'Sneha George', 'Arjun Nair', 'Fatima Shaikh', 'Joel D\'Souza', 'Kavya Reddy', 'Nikhil Joshi', 'Merin Thomas', 'Pooja Kulkarni', 'Sameer Khan', 'Divya Pillai'];
+  const thetas = [1.6, -0.9, 0.4, 1.1, -1.4, 0.1, 2.0, -0.3, 0.7, -0.6, 1.3, -1.1];
+  const offsets = [18, 9, 12, null, 16, 30, 25, null, 6, 40, 11, 20];
+  const rand = rng(2026);
+  const normal = () => { const u = rand() || 1e-9, v = rand(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); };
+  const diff = { 1: -1.3, 2: -0.2, 3: 0.9 };
+  const today = new Date();
+  return names.map((name, i) => {
+    const theta = thetas[i];
+    const form = buildForm(ITEMS, { seed: 1000 + i });
+    const responses = form.map((it) => {
+      const c = 1 / it.options.length;
+      const p = c + (1 - c) / (1 + Math.exp(-1.4 * (theta - diff[it.level])));
+      const idk = p < 0.45 && rand() < 0.35;
+      const correct = !idk && rand() < p;
+      const wrong = it.options.map((_, k) => k).filter((k) => k !== it.answer);
+      return { itemId: it.id, idk, choice: idk ? null : (correct ? it.answer : wrong[Math.floor(rand() * wrong.length)]) };
+    });
+    const sr = () => Math.max(0, Math.min(3, Math.round(1.6 + theta * 0.8 + normal() * 0.6)));
+    const self = { selfListening: sr(), selfWriting: sr(), selfSpeaking: sr() };
+    let examDate = '';
+    if (offsets[i] != null) { const d = new Date(today); d.setDate(d.getDate() + offsets[i]); examDate = d.toISOString().slice(0, 10); }
+    const result = scoreAttempt(form, responses, self, 'goethe');
+    const code = encodeResult({ name: `Sample: ${name}`, batch: i < 6 ? 'A1 Weekend' : 'A1 Evening', exam: 'goethe', examDate, form, responses, self, result });
+    return `[${name}] My A1 readiness result\nTrainer code: ${code}`;
+  }).join('\n\n');
+}
+
+function download(name, text, type) {
+  const url = URL.createObjectURL(new Blob([text], { type }));
+  const a = Object.assign(document.createElement('a'), { href: url, download: name });
+  document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+}
+
+function shareCode() {
+  return encodeResult({
+    name: state.learnerName, batch: state.learnerBatch, exam: state.exam, examDate: state.examDate,
+    form: state.form, responses: state.responses, self: state.self, result: state.result,
+  });
+}
+function waLink() { return 'https://wa.me/?text=' + encodeURIComponent(summaryText()); }
+
+function summaryText() {
+  const r = state.result;
+  const lines = [
+    `${state.learnerName || 'A learner'}${state.learnerBatch ? ` (${state.learnerBatch})` : ''} – A1 readiness check`,
+    `Checked on ${new Date().toLocaleDateString('en-IN')}`,
+    `Exam: ${CONFIG.exams[state.exam].label}${state.examDate ? ` on ${state.examDate}` : ''}`,
+    `Result: ${VERDICT[r.verdict.level].tag} – estimated ${r.predicted}/100 (likely ${r.range[0]}–${r.range[1]}, pass = 60)`,
+    `Vocabulary ${r.skills.vocab.correct}/5 · Grammar ${r.skills.grammar.correct}/5 · Reading ${r.skills.reading.correct}/5`,
+    'Practise first:',
+    ...state.recs.map((x, i) => `  ${i + 1}. ${x.title}`),
+    '',
+    `Trainer code: ${shareCode()}`,
+  ];
+  return lines.join('\n');
+}
+
+// ───────────────────────── events ─────────────────────────
+app.addEventListener('click', onClick);
+document.querySelector('.topbar').addEventListener('click', onClick);
+document.querySelector('.foot').addEventListener('click', onClick);
+app.addEventListener('change', (e) => {
+  if (e.target.id === 'date') { state.examDate = e.target.value; }
+});
+app.addEventListener('input', (e) => {
+  if (e.target.id === 'lname' || e.target.id === 'lbatch') {
+    if (e.target.id === 'lname') state.learnerName = remember('name', e.target.value);
+    else state.learnerBatch = remember('batch', e.target.value);
+    const wa = document.getElementById('wa');
+    if (wa) wa.href = waLink();
+  }
+  if (e.target.id === 'batchText') { state.batchText = e.target.value; }
+});
+
+function onClick(e) {
+  const el = e.target.closest('[data-action]');
+  if (!el) return;
+  const { action, value } = el.dataset;
+  if (el.tagName === 'A' && el.getAttribute('href')?.startsWith('#')) e.preventDefault();
+  const item = state.form[state.idx];
+
+  switch (action) {
+    case 'home': location.hash = ''; go('welcome'); break;
+    case 'exam': state.exam = value; render(); break;
+    case 'nodate': state.noDate = !state.noDate; if (state.noDate) state.examDate = ''; render(); break;
+    case 'start': {
+      const d = document.getElementById('date'); if (d && !state.noDate) state.examDate = d.value;
+      start(); break;
+    }
+    case 'choose':
+      state.answers[item.id] = { ...(state.answers[item.id] ?? { ms: 0 }), choice: Number(el.dataset.choice), idk: false };
+      refreshQuestion(); break;
+    case 'idk':
+      state.answers[item.id] = { ...(state.answers[item.id] ?? { ms: 0 }), choice: null, idk: true };
+      refreshQuestion(); break;
+    case 'next': next(); break;
+    case 'back': back(); break;
+    case 'self': state.self[el.dataset.id] = Number(value); render(); break;
+    case 'backToQuestions': state.idx = state.form.length - 1; go('question'); break;
+    case 'finish': finish(); break;
+    case 'retake': store.track('retake_clicked', { attemptId: state.attemptId }); start(); break;
+    case 'copy':
+      navigator.clipboard?.writeText(summaryText()).then(() => toast('Summary copied'), () => toast('Copy failed – select the text manually'));
+      store.track('sent_to_trainer', { attemptId: state.attemptId, channel: 'copy' }); break;
+    case 'insights': location.hash = 'insights'; go('insights'); break;
+    case 'batch': location.hash = 'batch'; go('batch'); break;
+    case 'sent': store.track('sent_to_trainer', { attemptId: state.attemptId, channel: 'whatsapp' }); break;
+    case 'analyse': {
+      const t = document.getElementById('batchText');
+      state.batchText = remember('batchText', t ? t.value : state.batchText);
+      state.batchFilter = 'all'; store.track('batch_analysed'); render(); break;
+    }
+    case 'sampleBatch': state.batchText = remember('batchText', sampleBatchText()); state.batchFilter = 'all'; render(); break;
+    case 'clearBatch': state.batchText = remember('batchText', ''); render(); break;
+    case 'batchFilter': state.batchFilter = value; render(); break;
+    case 'batchCsv': download('batch-readiness.csv', batchCSV(filteredBatch()), 'text/csv'); break;
+    case 'exportJson': download('examready-data.json', JSON.stringify(store.getAll(), null, 2), 'application/json'); break;
+    case 'exportCsv': download('examready-responses.csv', store.toCSV(), 'text/csv'); break;
+    case 'simulate': simulate(300); toast('Added 300 simulated learners'); render(); break;
+    case 'clear': store.clearAll(); toast('Local data cleared'); render(); break;
+  }
+}
+
+// Re-render the question without restarting its clock.
+function refreshQuestion() {
+  const t = state.qStart;
+  app.innerHTML = question();
+  state.qStart = t;
+}
+
+document.addEventListener('keydown', (e) => {
+  if (state.screen !== 'question' || e.target.tagName === 'INPUT') return;
+  const item = state.form[state.idx];
+  const n = Number(e.key);
+  if (n >= 1 && n <= item.order.length) {
+    state.answers[item.id] = { ...(state.answers[item.id] ?? { ms: 0 }), choice: item.order[n - 1], idk: false };
+    refreshQuestion();
+  } else if (e.key === '0' || e.key === '?') {
+    state.answers[item.id] = { ...(state.answers[item.id] ?? { ms: 0 }), choice: null, idk: true };
+    refreshQuestion();
+  } else if (e.key === 'Enter') {
+    e.preventDefault();
+    const a = state.answers[item.id];
+    if (a && (a.choice != null || a.idk)) next();
+  } else if (e.key === 'ArrowLeft') back();
+});
+
+state.screen = { '#insights': 'insights', '#batch': 'batch' }[location.hash] ?? 'welcome';
+render();
+</script>
+</body>
+</html>

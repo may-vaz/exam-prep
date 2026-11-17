@@ -83,8 +83,6 @@ input:disabled { background: var(--bg); color: var(--ink-3); }
 :focus-visible { outline: 3px solid rgba(37,70,216,.35); outline-offset: 2px; }
 
 /* Welcome */
-.hero { margin-bottom: 22px; }
-.hero h1 { font-size: 2.05rem; margin-top: 14px; }
 .meta { display: flex; flex-wrap: wrap; gap: 6px 18px; list-style: none; padding: 0; margin: 14px 0 0; font-size: .88rem; color: var(--ink-2); font-weight: 500; }
 .meta li::before { content: "✓"; color: var(--ready); font-weight: 700; margin-right: 6px; }
 .form { padding: 22px; box-shadow: var(--shadow); }
@@ -99,11 +97,7 @@ input:disabled { background: var(--bg); color: var(--ink-3); }
 .rcard[aria-pressed="true"] .radio { border-color: var(--brand); box-shadow: inset 0 0 0 3px #fff; background: var(--brand); }
 .date-row { display: flex; gap: 8px; align-items: center; }
 .date-row input { flex: 1; }
-.steps { list-style: none; counter-reset: s; padding: 0; margin: 28px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-.steps li { counter-increment: s; font-size: .82rem; color: var(--ink-2); line-height: 1.4; }
-.steps li::before { content: counter(s); display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--card); border: 1px solid var(--line-2); font-weight: 700; font-size: .75rem; color: var(--ink); margin-bottom: 8px; }
-.steps b { display: block; color: var(--ink); font-size: .86rem; margin-bottom: 2px; }
-.hint { font-size: .84rem; color: var(--ink-2); margin-top: 22px; padding: 12px 14px; background: var(--card); border: 1px dashed var(--line-2); border-radius: 12px; }
+.steps li:first-child { border-left: 0; }
 
 /* Question */
 main:has(.bottombar) { padding-bottom: 120px; }
@@ -234,11 +228,8 @@ td.cell { font-weight: 650; }
 
 @media (max-width: 460px) {
   main { padding: 22px 16px 40px; }
-  h1, .hero h1 { font-size: 1.6rem; }
-  .steps { grid-template-columns: 1fr; gap: 10px; }
-  .steps li { display: grid; grid-template-columns: 24px 1fr; column-gap: 10px; }
-  .steps li::before { margin: 0; grid-row: span 2; }
-  .skill { grid-template-columns: 7.8rem 1fr 2.6rem; font-size: .85rem; }
+  h1,       .steps li:first-child { border-top: 0; }
+    .skill { grid-template-columns: 7.8rem 1fr 2.6rem; font-size: .85rem; }
   .two { grid-template-columns: 1fr; }
   .score b { font-size: 2.4rem; }
   .seg button { font-size: .76rem; }
@@ -247,6 +238,26 @@ td.cell { font-weight: 650; }
 .score-note { white-space: nowrap; }
 .accordion summary { align-items: center; }
 .accordion summary .muted { white-space: nowrap; }
+
+/* Welcome layout */
+.welcome h1 { font-size: 2.1rem; margin-top: 14px; }
+.steps { list-style: none; padding: 0; margin: 26px 0 0; display: grid; gap: 0; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.steps li { display: flex; align-items: center; gap: 14px; padding: 14px 16px; border-top: 1px solid var(--line); }
+.steps li:first-child { border-top: 0; }
+.steps .n { flex: none; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--brand-soft); color: var(--brand); font-weight: 800; font-size: .8rem; }
+.steps b { display: block; font-size: .92rem; }
+.steps small { display: block; font-size: .82rem; color: var(--ink-2); margin-top: 1px; }
+.hint { font-size: .8rem; color: var(--ink-2); margin: 14px 0 0; text-align: center; line-height: 1.5; }
+.w-right { margin-top: 22px; }
+
+.wide main, .wide .brand, .wide .foot { max-width: 1080px; }
+@media (min-width: 900px) {
+  .wide main { padding-top: 40px; padding-bottom: 40px; }
+  .welcome { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; min-height: calc(100vh - 190px); }
+  .welcome h1 { font-size: 2.6rem; line-height: 1.12; }
+  .w-right { margin-top: 0; }
+  .welcome .form { padding: 26px; }
+}
 </style>
   <script>
     // Optional: send events to a backend (Supabase / PostHog / webhook). Leave empty for local-only.
@@ -1369,6 +1380,7 @@ function render() {
   const screens = { welcome, question, self, result, insights, batch };
   app.innerHTML = (screens[state.screen] ?? welcome)();
   document.body.classList.toggle('focus', state.screen === 'question' || state.screen === 'self');
+  document.body.classList.toggle('wide', state.screen === 'welcome');
   if (state.screen === 'question') state.qStart = Date.now();
   const first = app.querySelector('h1, .prompt');
   if (first) first.setAttribute('tabindex', '-1');
@@ -1381,40 +1393,43 @@ function welcome() {
     ['unsure', 'Not decided yet', 'We use the common 60% pass mark'],
   ];
   return `
-  <section class="hero">
-    <span class="eyebrow">Goethe · ÖSD · CEFR A1</span>
-    <h1>Are you ready to book your A1 German exam?</h1>
-    <p class="lead">A short check that estimates your exam score, shows where you stand in each skill, and tells you what to practise first.</p>
-    <ul class="meta">
-      <li>15 questions</li><li>About 8 minutes</li><li>No sign-up</li>
-    </ul>
-  </section>
+  <div class="welcome">
+    <section class="w-left">
+      <span class="eyebrow">Goethe · ÖSD · CEFR A1</span>
+      <h1>Are you ready to book your A1 German exam?</h1>
+      <p class="lead">A short check that estimates your exam score, shows where you stand in each skill, and tells you what to practise first.</p>
+      <ul class="meta">
+        <li>15 questions</li><li>About 8 minutes</li><li>No sign-up</li>
+      </ul>
+      <ol class="steps">
+        <li><span class="n">1</span><div><b>Answer 15 questions</b><small>Vocabulary, grammar and reading, in exam style</small></div></li>
+        <li><span class="n">2</span><div><b>Rate 3 skills</b><small>Listening, writing and speaking</small></div></li>
+        <li><span class="n">3</span><div><b>Get your plan</b><small>Score estimate, skill breakdown, what to practise</small></div></li>
+      </ol>
+    </section>
 
-  <div class="card form">
-    <div class="field-label">Which exam are you taking?</div>
-    <div class="rcards" role="group">
-      ${exams.map(([k, t, s]) => `
-        <button class="rcard" data-action="exam" data-value="${k}" aria-pressed="${state.exam === k}">
-          <span class="radio" aria-hidden="true"></span>
-          <span><b>${t}</b><small>${s}</small></span>
-        </button>`).join('')}
-    </div>
+    <section class="w-right">
+      <div class="card form">
+        <div class="field-label">Which exam are you taking?</div>
+        <div class="rcards" role="group">
+          ${exams.map(([k, t, sub]) => `
+            <button class="rcard" data-action="exam" data-value="${k}" aria-pressed="${state.exam === k}">
+              <span class="radio" aria-hidden="true"></span>
+              <span><b>${t}</b><small>${sub}</small></span>
+            </button>`).join('')}
+        </div>
 
-    <div class="field-label" style="margin-top:20px"><label for="date">Exam date</label> <span class="opt">optional</span></div>
-    <div class="date-row">
-      <input id="date" type="date" value="${esc(state.examDate)}" ${state.noDate ? 'disabled' : ''} />
-      <button class="chip" data-action="nodate" aria-pressed="${state.noDate}">Not booked yet</button>
-    </div>
+        <div class="field-label" style="margin-top:20px"><label for="date">Exam date</label> <span class="opt">optional</span></div>
+        <div class="date-row">
+          <input id="date" type="date" value="${esc(state.examDate)}" ${state.noDate ? 'disabled' : ''} />
+          <button class="chip" data-action="nodate" aria-pressed="${state.noDate}">Not booked yet</button>
+        </div>
 
-    <button class="btn block lg" data-action="start" style="margin-top:22px">Start the check</button>
-  </div>
-
-  <ol class="steps">
-    <li><b>Answer 15 questions</b><span>Vocabulary, grammar and reading, in exam style</span></li>
-    <li><b>Rate 3 skills</b><span>Listening, writing and speaking</span></li>
-    <li><b>Get your plan</b><span>Score estimate, skill breakdown, what to practise</span></li>
-  </ol>
-  <p class="hint">Tap <b>“I don't know yet”</b> instead of guessing. Guesses make you look more ready than you are.</p>`;
+        <button class="btn block lg" data-action="start" style="margin-top:22px">Start the check</button>
+        <p class="hint">Tap <b>“I don't know yet”</b> instead of guessing. Guesses make you look more ready than you are.</p>
+      </div>
+    </section>
+  </div>`;
 }
 
 function question() {
